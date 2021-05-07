@@ -1,0 +1,16 @@
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\bin\Debug\DropDown_Menu.exe.config
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\bin\Debug\DropDown_Menu.exe
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\bin\Debug\DropDown_Menu.pdb
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\DropDown_Menu.csprojAssemblyReference.cache
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\MainWindow.g.cs
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\App.g.cs
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\DropDown_Menu_MarkupCompile.cache
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\DropDown_Menu_MarkupCompile.lref
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\App.baml
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\MainWindow.baml
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\DropDown_Menu.g.resources
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\DropDown_Menu.Properties.Resources.resources
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\DropDown_Menu.csproj.GenerateResource.cache
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\DropDown_Menu.csproj.CoreCompileInputs.cache
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\DropDown_Menu.exe
+C:\Users\omarm\source\repos\Navigation-Concepts\DropDown_Menu\DropDown_Menu\obj\Debug\DropDown_Menu.pdb
