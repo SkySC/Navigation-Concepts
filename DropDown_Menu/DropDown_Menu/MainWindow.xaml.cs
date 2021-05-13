@@ -68,12 +68,6 @@ namespace DropDown_Menu
             }
 
         }
-        // Begins the storyboard.
-        private void beginButton_Clicked(object sender, RoutedEventArgs args)
-        {
-            // Specifying "true" as the second Begin parameter
-            // makes this storyboard controllable.
-            myStoryboard.Begin(this);
-        }
+        
     }
 }
