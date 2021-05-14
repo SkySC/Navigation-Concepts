@@ -24,5 +24,15 @@ namespace Online_Shop
         {
             InitializeComponent();
         }
+
+        private void ToggleButton_Checked(object sender, RoutedEventArgs e)
+        {
+            main_grid.Opacity = 0.9;
+        }
+
+        private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            main_grid.Opacity = 1;
+        }
     }
 }

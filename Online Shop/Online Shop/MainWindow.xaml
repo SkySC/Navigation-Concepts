@@ -5,8 +5,81 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Online_Shop"
         mc:Ignorable="d"
-        Title="Online shop" Height="450" Width="800">
-    <Grid>
+        Title="Online shop" Height="920" Width="1200" WindowStartupLocation="CenterScreen"
+        >
+    <Grid x:Name="main_grid" Background="#FF7D7D7D">
+       
+        <Grid Width="50" x:Name="nav_pnl" HorizontalAlignment="Left" VerticalAlignment="Stretch"  >
+            <!--Background="#5D6B99"-->
+            <StackPanel  >
+                <!--Background="White"-->
+                <Grid Height="160" >
+                    <ToggleButton Height="50" Width="50" 
+                                  HorizontalAlignment="Right" 
+                                  VerticalAlignment="Top" 
+                                  BorderThickness="0"
+                                  ToggleButton.Checked="ToggleButton_Checked"
+                                  ToggleButton.Unchecked="ToggleButton_Unchecked"
+                                  >
+                        <ToggleButton.Background>
+                            <ImageBrush ImageSource="Assets/menu_24px.png" Stretch="None"/>
+                        </ToggleButton.Background>
+                        <ToggleButton.Triggers>
+                            <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="nav_pnl" 
+                                                         BeginTime="0" 
+                                                         Duration="0:0:0.5"
+                                                         Storyboard.TargetProperty="Width"
+                                                         From="250" To="50" >
+                                            
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="nav_pnl" 
+                                                         BeginTime="0" 
+                                                         Duration="0:0:0.5"
+                                                         Storyboard.TargetProperty="Width"
+                                                         From="50" To="250" >
+
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ToggleButton.Triggers>
+                    </ToggleButton>
+                </Grid>
+                <StackPanel Orientation="Horizontal" Margin="0,0,50,0">
+                    
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Background="#5D6B99" Width="200" Height="730">
+                       
+                    </StackPanel>
+                   
+                    
+
+                </StackPanel>
+                
+            </StackPanel>
+        </Grid>
+
+
         
+
+
+
+
+
+
+
+
+
+
+
+
     </Grid>
 </Window>
