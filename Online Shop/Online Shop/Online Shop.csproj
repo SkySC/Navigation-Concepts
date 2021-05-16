@@ -103,10 +103,7 @@
     <Resource Include="Assets\menu_24px.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\menu_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\menu_48px.png" />
+    <Resource Include="Assets\home_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

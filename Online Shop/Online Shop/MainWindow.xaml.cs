@@ -27,12 +27,17 @@ namespace Online_Shop
 
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
-            main_grid.Opacity = 0.9;
+            main_grid.Opacity = 0.8;
         }
 
         private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
         {
             main_grid.Opacity = 1;
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
