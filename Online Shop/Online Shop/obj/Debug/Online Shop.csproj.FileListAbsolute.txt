@@ -13,3 +13,4 @@ C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debu
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop.csproj.CoreCompileInputs.cache
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop.exe
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop.pdb
+C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\App.baml

@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:Online_Shop"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <Style TargetType="Button" x:Key="tab_btn" >
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="Black"/>
+            
+        </Style>
         
     </Application.Resources>
 </Application>

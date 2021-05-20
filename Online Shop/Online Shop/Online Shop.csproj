@@ -105,5 +105,29 @@
   <ItemGroup>
     <Resource Include="Assets\home_30px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\shopping_cart_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\shopping_cart_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\male_user_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\bulleted_list_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\test_account_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\list_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\list_is_empty_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\purchase_order_32px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
