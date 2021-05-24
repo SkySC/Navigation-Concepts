@@ -1,0 +1,16 @@
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\bin\Debug\plattform.exe.config
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\bin\Debug\plattform.exe
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\bin\Debug\plattform.pdb
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\plattform.csprojAssemblyReference.cache
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\MainWindow.g.cs
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\App.g.cs
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\plattform_MarkupCompile.cache
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\plattform_MarkupCompile.lref
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\MainWindow.baml
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\plattform.g.resources
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\plattform.Properties.Resources.resources
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\plattform.csproj.GenerateResource.cache
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\plattform.csproj.CoreCompileInputs.cache
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\plattform.exe
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\plattform.pdb
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\App.baml

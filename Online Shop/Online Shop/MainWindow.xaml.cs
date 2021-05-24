@@ -23,6 +23,8 @@ namespace Online_Shop
         public MainWindow()
         {
             InitializeComponent();
+            
+            
         }
 
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
@@ -30,30 +32,50 @@ namespace Online_Shop
             
            
             frame.Opacity = 0.3;
+           
             tab1.Opacity = 0.3;
             tab2.Opacity = 0.3;
-            tab3.Opacity = 0.3;
             
 
         }
+        
 
         private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
         {
            frame.Opacity = 1;
-           tab1.Opacity = 1;
            tab2.Opacity = 1;
-           tab3.Opacity = 1;
+           tab1.Opacity = 1;
 
         }
 
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+            
+        }
+        private void Maximize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Maximized;
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
         private void Login_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Tab_Click(object sender, RoutedEventArgs e)
         {
-
+            int index = int.Parse(((Button)e.Source).Uid);
+            GridCursor.Margin = new Thickness(10 + (150 * index), 0, 0, 0);
         }
     }
 }
+

@@ -3,233 +3,163 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Online_Shop"
         mc:Ignorable="d"
-        Title="Online shop" Height="920" Width="1200" WindowStartupLocation="CenterScreen" 
+        Title="Online shop" Height="920" Width="1200" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown"
+        ResizeMode="CanMinimize"
          >
+    <!--Erstellt von OMAR ALMASALMEH-->
 
     
     
-        <Grid x:Name="main_grid" Background="#FF7D7D7D">
+    
+    
+    
+    
+    
 
-        <Grid.ColumnDefinitions>
-           
-        </Grid.ColumnDefinitions>
-         
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="*"/>
+   
+        <Grid x:Name="main_grid"  Background="#FF7D7D7D" >
+
+            <!--Aufteilung der Bereiche der Page-->
             
-        </Grid.RowDefinitions>    
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <Grid Width="50" x:Name="nav_pnl" HorizontalAlignment="Left" Panel.ZIndex="1" Grid.Row="1" Grid.RowSpan="10" Grid.ColumnSpan="10" >
-            
-            <StackPanel >
-              
-                <Grid Height="160"  >
-                    <ToggleButton Height="50" Width="50" Margin="0 10 0 0"
-                                  HorizontalAlignment="Right" 
-                                  VerticalAlignment="Top" 
-                                  BorderThickness="0"
-                                  ToggleButton.Checked="ToggleButton_Checked"
-                                  ToggleButton.Unchecked="ToggleButton_Unchecked"
-                                  BorderBrush="Transparent"
-                                  
-                                  >
-                        <ToggleButton.Background>
-                            <ImageBrush ImageSource="Assets/bulleted_list_32px.png" Stretch="None"/>
-                        </ToggleButton.Background>
-                        <ToggleButton.Triggers>
-                            <EventTrigger RoutedEvent="ToggleButton.Unchecked">
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="nav_pnl" 
-                                                         BeginTime="0" 
-                                                         Duration="0:0:0.5"
-                                                         Storyboard.TargetProperty="Width"
-                                                         From="250" To="50" >
+            <Grid Height="35" Grid.Row="0" Background="#283864" >
+                <StackPanel Orientation="Horizontal" Height="35" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center">
 
-                                        </DoubleAnimation>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                            <EventTrigger RoutedEvent="ToggleButton.Checked">
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="nav_pnl" 
-                                                         BeginTime="0" 
-                                                         Duration="0:0:0.5"
-                                                         Storyboard.TargetProperty="Width"
-                                                         From="50" To="250" >
+                    <Button Content="-" FontSize="20" Click="Minimize_Click" Foreground="White"  Background="{x:Null}" Height="35" Width="35" HorizontalAlignment="Right" VerticalAlignment="Center" BorderBrush="Transparent" />
+                    <Button Content="[ ]" FontSize="20" Click="Maximize_Click" Foreground="White" Background="{x:Null}" Height="35" Width="35" HorizontalAlignment="Right" VerticalAlignment="Center" BorderBrush="Transparent"  />
+                    <Button Content="X" FontSize="20" Click="Close_Click" Foreground="White" Background="{x:Null}" Height="35" Width="35" HorizontalAlignment="Right" VerticalAlignment="Center"  BorderBrush="Transparent" />
 
-                                        </DoubleAnimation>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                        </ToggleButton.Triggers>
-                    </ToggleButton>
-                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="160" Background="Gold" Margin="0,0,50,0"  >
-                        
+                </StackPanel>
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--SideMenu-->
+                <Grid Grid.Column="0" Background="#283864" >
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                        <Button Width="50" Height="50" >
+
+                        </Button>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                        <Button Width="50" Height="50">
+
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+                        <Button Width="50" Height="50" BorderBrush="Transparent">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Assets/settings_48px.png" Stretch="None"/>
+
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--Tab Navigation 1-->
+                    <DockPanel x:Name="tab1" Height="50" Grid.Row="0" Background="White">
+                        <TextBox Text="SUCHEN" x:Name="txtBoxSearch" DockPanel.Dock="Left" Margin="100 0 0 0" Width="400" Height="40" Background="White" Padding="10" Foreground="Gray" HorizontalAlignment="Center" />
+
+                        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Height="50" Width="250" HorizontalAlignment="Right" VerticalAlignment="Center" >
+                            <Button  Height="50" Width="50"  BorderBrush="{x:Null}">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Assets/male_user_30px.png"  Stretch="None" />
+                                </Button.Background>
+                            </Button>
+
+                            <Button  Height="50" Width="50"   BorderBrush="{x:Null}" >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Assets/shopping_cart_30px.png" Stretch="None" />
+
+                                </Button.Background>
+                            </Button>
+
+                            <Button  Height="50" Width="50"  BorderBrush="{x:Null}"  >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Assets/list_is_empty_24px.png" Stretch="None" />
+
+                                </Button.Background>
+                            </Button>
+                            <Button  Height="50" Width="50"  BorderBrush="{x:Null}">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Assets/order_history_30px.png" Stretch="None" />
+
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+
+                    </DockPanel>
+
+
+                    <!--Tab Navigation 2-->
+                    <Grid Height="45" Grid.Row="1"  Background="White" >
+                        <StackPanel x:Name="tab2" Orientation="Horizontal" Margin="10 0"   VerticalAlignment="Top" >
+                            <Button Uid="0"  Content="HOME" Height="40" Width="150"   Margin="0" Style="{StaticResource MyButtonStyle}" Click="Tab_Click"/>
+                            <Button Uid="1"  Content="STORE" Height="40" Width="150"  Margin="0" Style="{StaticResource MyButtonStyle}" Click="Tab_Click" />
+
+                            <Button Uid="2"  Content="LIBRARY" Height="40" Margin="0" Width="150" Style="{StaticResource  MyButtonStyle}" Click="Tab_Click"/>
+                            <Button Uid="3"  Content="COMMUNITY" Height="40" Margin="0" Width="150" Style="{StaticResource MyButtonStyle}" Click="Tab_Click"/>
+
+                            <Button Uid="4"  Content="INVENTORY" Height="40" Margin="0" Width="150" Style="{StaticResource MyButtonStyle}" Click="Tab_Click"/>
+                            <Button Uid="5"  Content="STATISTIK" Height="40" Margin="0" Width="150" Style="{StaticResource MyButtonStyle}" Click="Tab_Click"/>
+                            <Button Uid="6"  Content="STREAM" Height="40" Margin="0" Width="150" Style="{StaticResource MyButtonStyle}" Click="Tab_Click"/>
+
+                        </StackPanel>
+                        <Grid x:Name="GridCursor" Height="5" Width="150" Background="#FF2196F3" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10 0 0 0"/>
                     </Grid>
+
+
+
+
+
+
+
+                    <!--Frame, wo verschiedene Pages gezeigt wird-->
+                    <Frame x:Name="frame" Grid.Row="2" NavigationUIVisibility="Hidden" ></Frame>
+
                 </Grid>
 
 
-                <StackPanel Width="200" Margin="0,0,50,0" Background="#FF1F28AB" >
-                    <ListView BorderBrush="Transparent">
-                        <ListViewItem Height="40">
-                            <StackPanel Orientation="Horizontal" Width="150" >
-                                <Image Source="Assets/home_30px.png"/>
-                                <TextBlock Text=" Home" Margin="30,0,0,0" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem Height="40">
-                            <StackPanel Orientation="Horizontal" Width="150" >
-                                <Image Source="Assets/home_30px.png"/>
-                                <TextBlock Text=" Home" Margin="30,0,0,0" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem Height="40">
-                            <StackPanel Orientation="Horizontal" Width="150" >
-                                <Image Source="Assets/home_30px.png"/>
-                                <TextBlock Text=" Home" Margin="30,0,0,0" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem Height="40">
-                            <StackPanel Orientation="Horizontal" Width="150" >
-                                <Image Source="Assets/home_30px.png"/>
-                                <TextBlock Text=" Home" Margin="30,0,0,0" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem Height="40">
-                            <StackPanel Orientation="Horizontal" Width="150" >
-                                <Image Source="Assets/home_30px.png"/>
-                                <TextBlock Text=" Home" Margin="30,0,0,0" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem Height="40">
-                            <StackPanel Orientation="Horizontal" Width="150" >
-                                <Image Source="Assets/home_30px.png"/>
-                                <TextBlock Text=" Home" Margin="30,0,0,0" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem Height="40">
-                            <StackPanel Orientation="Horizontal" Width="150" >
-                                <Image Source="Assets/home_30px.png"/>
-                                <TextBlock Text=" Home" Margin="30,0,0,0" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </ListViewItem>
-                    </ListView>
-
-                </StackPanel>
-                
 
 
 
 
 
-            </StackPanel>
+
+
+
+
+
+
+
+
+
+
+
+
+            </Grid>
         </Grid>
-        <Grid Grid.Row="0" Background="White" Height="20" x:Name="tab1" >
-            <Button Content="Hilfe" BorderBrush="{x:Null}" Margin="0 0 10 0" Foreground="Gray" FontSize="10" Background="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Center"></Button>
-            <Button Content="Kontakt" BorderBrush="{x:Null}"  Foreground="Gray" FontSize="10" Background="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,50,0"></Button>
-            <Button Content="Über uns" BorderBrush="{x:Null}" Foreground="Gray" FontSize="10" Background="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,100,0"></Button>
-            
 
-        </Grid>
-           
-        
-        <StackPanel x:Name="tab2" Orientation="Horizontal"  Grid.Row="1" Grid.ColumnSpan="10" Height="70" Background="White"   >
-            
-            <Button Content="Neuerscheinungen" Height="50" Width="120" Background="{x:Null}"  Click="Button_Click" Margin="60 0 0 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Bestseller" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10" Style="{StaticResource tab_btn}"/>
-            
-            
-            
-            <TextBox Text="SUCHEN" x:Name="txtBoxSearch" Width="400" Height="40" Background="White" Padding="10" Foreground="Gray" HorizontalAlignment="Center" />
-            
-            
-            
-           
-            <StackPanel Height="70" Orientation="Horizontal">
-                
-                <Button  Height="50" Width="50"  Click="Button_Click" BorderBrush="{x:Null}">
-                    <Button.Background>
-                        <ImageBrush ImageSource="Assets/test_account_30px.png" Stretch="None" />
-                    </Button.Background>
-                </Button>
-                <TextBlock Text="Mein Konto" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" />
-            </StackPanel>
-            <StackPanel Height="70" Orientation="Horizontal" >
-                
-                <Button  Height="50" Width="50"  Click="Button_Click"  BorderBrush="{x:Null}">
-                    <Button.Background>
-                        <ImageBrush ImageSource="Assets/shopping_cart_30px.png" Stretch="None" />
-                        
-                    </Button.Background>
-                </Button>
-                <TextBlock Text="Warenkorb" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-
-            <StackPanel Height="70" Orientation="Horizontal">
-
-                <Button  Height="50" Width="50"  Click="Button_Click"  BorderBrush="{x:Null}" >
-                    <Button.Background>
-                        <ImageBrush ImageSource="Assets/list_is_empty_24px.png" Stretch="None" />
-
-                    </Button.Background>
-                </Button>
-                <TextBlock Text="Merkliste" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Height="70" Orientation="Horizontal">
-
-                <Button  Height="50" Width="50"  Click="Button_Click"  BorderBrush="{x:Null}" >
-                    <Button.Background>
-                        <ImageBrush ImageSource="Assets/purchase_order_32px.png" Stretch="None" />
-
-                    </Button.Background>
-                </Button>
-                <TextBlock Text="Bestellungen" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
-            
-
-
-        </StackPanel>
-        <!--Background="#425265"-->
-        <StackPanel x:Name="tab3" Orientation="Horizontal" VerticalAlignment="Center"  Grid.Row="2" Grid.ColumnSpan="10" Height="70"  Background="White">
-            <Button Content="Bücher" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="20,0,0,0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Sport" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Smart Home" Height="50" Width="90" Background="{x:Null}" Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Computer" Height="50" Width="90" Background="{x:Null}" Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Filme" Height="50" Width="90" Background="{x:Null}" Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Baumarkt" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Spielzeug" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Damen" Height="50" Width="90" Background="{x:Null}" Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Herren" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Kinder" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Küche" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Möbel" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Marken" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Schuhe" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Haushalt" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-            <Button Content="Baumarkt" Height="50" Width="90" Background="{x:Null}"  Click="Button_Click" Margin="10 0" Style="{StaticResource tab_btn}"/>
-        </StackPanel>
-
-        <Frame x:Name="frame" Grid.Row="3" Background="Wheat" Grid.ColumnSpan="10" ></Frame>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </Grid>
     
+    
+    
+
 </Window>

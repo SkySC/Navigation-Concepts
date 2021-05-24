@@ -1,16 +1,21 @@
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\bin\Debug\Online Shop.exe.config
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\bin\Debug\Online Shop.exe
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\bin\Debug\Online Shop.pdb
-C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop.csprojAssemblyReference.cache
+C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\bin\Debug\MaterialDesignColors.dll
+C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\bin\Debug\MaterialDesignColors.pdb
+C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\MainWindow.baml
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\MainWindow.g.cs
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\App.g.cs
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop_MarkupCompile.cache
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop_MarkupCompile.lref
-C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\MainWindow.baml
+C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\App.baml
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop.g.resources
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online_Shop.Properties.Resources.resources
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop.csproj.GenerateResource.cache
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop.csproj.CoreCompileInputs.cache
+C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop.csproj.CopyComplete
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop.exe
 C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\Online Shop.pdb
-C:\Users\omarm\source\repos\Navigation-Concepts\Online Shop\Online Shop\obj\Debug\App.baml
