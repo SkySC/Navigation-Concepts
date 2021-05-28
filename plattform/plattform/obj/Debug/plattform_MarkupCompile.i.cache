@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\App.xaml
-11151548125
+6-179503691
 
-61434861427
-13-1505183044
-MainWindow.xaml;
+15650150988
+15931707062
+Menus\CollapsibleMenu.xaml;Pages\Login.xaml;Menus\HamburgerMenu.xaml;Pages\Home.xaml;MainWindow.xaml;Menus\Tab.xaml;
 
 False
 

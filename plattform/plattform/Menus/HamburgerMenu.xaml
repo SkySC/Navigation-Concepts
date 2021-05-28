@@ -1,0 +1,193 @@
+﻿<Page x:Class="plattform.HamburgerMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:plattform"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="HamburgerMenu">
+
+    <Grid>
+        <Grid x:Name="nav_pnl"  HorizontalAlignment="Left" Width="0" 
+               Background ="White" 
+               ZIndex ="2">
+            <StackPanel >
+                <DockPanel Height="50">
+                    <ToggleButton x:Name="tgl2"  Style="{DynamicResource MaterialDesignHamburgerToggleButton}" HorizontalAlignment="Right" Checked="tgl2_Checked" Unchecked="tgl2_Unchecked" >
+                        <ToggleButton.Triggers>
+                            <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="nav_pnl" 
+                                                         BeginTime="0" 
+                                                         Duration="0:0:0.3"
+                                                         Storyboard.TargetProperty="Width"
+                                                         From="250" To="0" >
+
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="nav_pnl" 
+                                                         BeginTime="0" 
+                                                         Duration="0:0:0.3"
+                                                         Storyboard.TargetProperty="Width"
+                                                         From="0" To="250" >
+
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ToggleButton.Triggers>
+                    </ToggleButton>
+                </DockPanel>
+
+                <materialDesign:ColorZone Mode="Light"
+                                          VerticalAlignment="Stretch">
+                    <materialDesign:PackIcon
+                                Kind="AccountCircle"
+                                Height="128"
+                                Width="128"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center" />
+                    
+                </materialDesign:ColorZone>
+                <StackPanel Width="250" Background="#FAFAFA"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="MAX MUSTER" HorizontalAlignment="Center" />
+
+                    <Button Style="{StaticResource MaterialDesignFlatButton}"
+                           
+                            ToolTip="Edit Profile"
+                            Content="Edit" />
+
+                </StackPanel>
+                <ListView>
+                    <ListViewItem Content="Hello" />
+                    <ListViewItem Content="World" />
+                    <ListViewItem Content=":)" />
+                </ListView>
+
+
+
+            </StackPanel>
+        </Grid>
+
+
+        <materialDesign:ColorZone
+            Mode="PrimaryMid"
+            Padding="16">
+            <DockPanel>
+                <ToggleButton
+                      Style="{DynamicResource MaterialDesignSwitchAccentToggleButton}"
+                      VerticalAlignment="Center"
+                      DockPanel.Dock="Right" >
+                    
+                </ToggleButton>
+                <StackPanel
+                      Orientation="Horizontal"
+                      materialDesign:RippleAssist.IsCentered="True">
+                    <ToggleButton x:Name="tgl1"
+                                 Style="{DynamicResource MaterialDesignHamburgerToggleButton}" Checked="tgl1_Checked" Unchecked="tgl1_Unchecked"  >
+                        <ToggleButton.Triggers>
+                            <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="nav_pnl" 
+                                                         BeginTime="0" 
+                                                         Duration="0:0:0.3"
+                                                         Storyboard.TargetProperty="Width"
+                                                         From="250" To="0" >
+
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="nav_pnl" 
+                                                         BeginTime="0" 
+                                                         Duration="0:0:0.3"
+                                                         Storyboard.TargetProperty="Width"
+                                                         From="0" To="250" >
+
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ToggleButton.Triggers>
+                    </ToggleButton>
+                    <ComboBox
+                            SelectedIndex="0"
+                            Margin="8 0 0 0"
+                            BorderThickness="0"
+                            materialDesign:ColorZoneAssist.Mode="Standard"
+                            materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource MaterialDesignPaper}"
+                            BorderBrush="{DynamicResource MaterialDesignPaper}">
+                        <ComboBoxItem
+                            Content="Android" />
+                        <ComboBoxItem
+                                 Content="iOS" />
+                        <ComboBoxItem
+                                Content="Linux" />
+                        <ComboBoxItem
+                                Content="Windows" />
+                    </ComboBox>
+                    <materialDesign:ColorZone
+                                Mode="Standard"
+                                Padding="8 4 8 4"
+                                CornerRadius="20"
+                                Panel.ZIndex="1"
+                                Margin="16 0 0 0"
+                                 materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="Auto" />
+                                <ColumnDefinition
+                                      Width="*" />
+                                <ColumnDefinition
+                                     Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button
+                                 Style="{DynamicResource MaterialDesignToolButton}">
+                                <materialDesign:PackIcon Kind="Search"
+                                                         Opacity=".56" />
+                            </Button>
+                            <TextBox Grid.Column="1"
+                                     Margin="8 0 0 0"
+                                     materialDesign:HintAssist.Hint="Build a search bar"
+                                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                     BorderThickness="0"
+                                     MinWidth="200"
+                                     VerticalAlignment="Center" />
+                            <Button
+                                 Style="{DynamicResource MaterialDesignToolButton}"
+                                 Grid.Column="2">
+                                <materialDesign:PackIcon
+                                 Kind="Microphone"
+                                 Opacity=".56"
+                                 Margin="8 0 0 0" />
+                            </Button>
+                        </Grid>
+                    </materialDesign:ColorZone>
+                    <Button
+                       Style="{DynamicResource MaterialDesignToolForegroundButton}"
+                       Margin="8 0 0 0"
+                       Panel.ZIndex="0">
+                        <materialDesign:PackIcon
+                              Kind="Send" />
+                    </Button>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+    </Grid>
+</Page>

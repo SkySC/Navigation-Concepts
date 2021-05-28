@@ -20,37 +20,18 @@ namespace plattform
     /// </summary>
     public partial class MainWindow : Window
     {
+       
         public MainWindow()
         {
             InitializeComponent();
-        }
-        private void Close_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-        private void Minimize_Click(object sender, RoutedEventArgs e)
-        {
-            WindowState = WindowState.Minimized;
 
-        }
-        private void Maximize_Click(object sender, RoutedEventArgs e)
-        {
-            WindowState = WindowState.Maximized;
-        }
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.ChangedButton == MouseButton.Left)
-                this.DragMove();
-        }
-        private void Login_Click(object sender, RoutedEventArgs e)
-        {
+            this.DataContext = new WindowViewModel(this);
+        //myFrame.Content = new Login();
 
-        }
+    }
+        
 
-        private void Tab_Click(object sender, RoutedEventArgs e)
-        {
-            int index = int.Parse(((Button)e.Source).Uid);
-            GridCursor.Margin = new Thickness(10 + (150 * index), 0, 0, 0);
-        }
+
+
     }
 }

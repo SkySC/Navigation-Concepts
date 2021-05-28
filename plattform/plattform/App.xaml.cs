@@ -14,4 +14,5 @@ namespace plattform
     public partial class App : Application
     {
     }
+
 }
