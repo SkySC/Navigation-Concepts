@@ -85,10 +85,31 @@
     <Compile Include="Menus\Tab.xaml.cs">
       <DependentUpon>Tab.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Menus\OffCanvasMenu.xaml.cs">
+      <DependentUpon>OffCanvasMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLevelNavigation.xaml.cs">
+      <DependentUpon>MultiLevelNavigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Navigationen.xaml.cs">
+      <DependentUpon>Navigationen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ValueConverters,ViewModels\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters,ViewModels\BaseValueConverter.cs" />
     <Compile Include="ValueConverters,ViewModels\WindowViewModel.cs" />
     <Page Include="Menus\CollapsibleMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menus\OffCanvasMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MultiLevelNavigation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Navigationen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -171,6 +192,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\hsWorms.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" />

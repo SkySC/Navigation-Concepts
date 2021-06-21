@@ -6,6 +6,7 @@ namespace plattform
     public class WindowViewModel 
     {
         private Window mw;
+        
         public WindowViewModel(Window window)
         {
             mw = window;

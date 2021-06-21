@@ -29,9 +29,31 @@ namespace plattform
         //myFrame.Content = new Login();
 
     }
-        
 
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            switch (WindowViewModel.CurrentPage)
+            {
+                case ApplicationPage.Login:
+                    
+                    break;
+                case ApplicationPage.OffCanvas:
+                    
+                    WindowViewModel.CurrentPage = ApplicationPage.Login;
+                    this.DataContext = new WindowViewModel(this);
+                    break;
+                case ApplicationPage.Tab:
+                   
+                    WindowViewModel.CurrentPage = ApplicationPage.OffCanvas;
+                    this.DataContext = new WindowViewModel(this);
+                    break;
+                default:
+                    
+                    break;
 
+            }
+        }
 
+      
     }
 }

@@ -16,40 +16,25 @@ using System.Windows.Shapes;
 namespace plattform
 {
     /// <summary>
-    /// Interaktionslogik für Tab.xaml
+    /// Interaktionslogik für OffCanvasMenu.xaml
     /// </summary>
-    public partial class Tab : Page
+    public partial class OffCanvasMenu : Page
     {
-        public Tab()
+        public OffCanvasMenu()
         {
             InitializeComponent();
-           
+            WindowViewModel.CurrentPage = ApplicationPage.Tab;
+            frameOffCanvas.Content = new Tab();
         }
 
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             ScrollViewer scv = (ScrollViewer)sender;
-            scv.ScrollToHorizontalOffset(scv.HorizontalOffset - e.Delta);
+            scv.ScrollToVerticalOffset(scv.VerticalOffset - e.Delta);
             e.Handled = true;
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            setPage();
-        }
-        private void setPage()
-        {
-            if (firstTab.IsChecked == true)
-            {
-                WindowViewModel.CurrentPage = ApplicationPage.OffCanvas;
-            }
-            else
-            {
-                WindowViewModel.CurrentPage = ApplicationPage.Tab;
-            }
-        }
-
-        private void j(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
+        private void Chip_Click(object sender, RoutedEventArgs e)
         {
 
         }

@@ -15,65 +15,72 @@
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                 <GradientStop Color="#155378" Offset="0"/>
-                <GradientStop Color="#CCD5F0" Offset="0.3"/>
-                <GradientStop Color="#2F3136" Offset="0.5"/>
-                <GradientStop Color="#41BEAA" Offset="0.9"/>
-                <GradientStop Color="#C7C7C7" Offset="1"/>
+               
+                <GradientStop Color="#2F3136" Offset="0.9"/>
+                
+                
             </LinearGradientBrush>
         </Grid.Background>
 
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
 
 
 
+        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0.5" >
+        <Grid  Height="40" Background="#316280">
 
-        <materialDesign:ColorZone Mode="Dark" Grid.Row="0" Height="50" >
 
-
-            <ScrollViewer x:Name="scrollerTab" HorizontalScrollBarVisibility="Hidden"  VerticalScrollBarVisibility="Disabled" Foreground="Aquamarine" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+            <ScrollViewer x:Name="scrollerTab" VerticalAlignment="Top" HorizontalScrollBarVisibility="Hidden"  VerticalScrollBarVisibility="Disabled" Foreground="White" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
                 <WrapPanel Orientation="Horizontal" Margin="10 0 0 0">
 
-                    <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
+                    <RadioButton x:Name="firstTab" Style="{StaticResource MaterialDesignTabRadioButton}"
                              Margin="4"
+                             Checked="RadioButton_Checked"
                              IsChecked="True"
                              FontSize="20"
                              Content="STORE" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
                              Margin="4"
+                             Checked="RadioButton_Checked"
                              IsChecked="False"
                              FontSize="20"
-                             Content="LIBRARY" />
+                             Content="LIBRARY"  />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
                              Margin="4"
+                             Checked="RadioButton_Checked"
                              IsChecked="False"
                              FontSize="20"
                              
                              Content="COMMUNITY" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
                              Margin="4"
+                             Checked="RadioButton_Checked"   
                              FontSize="20"
                              IsChecked="False"
                              
                              Content="INVENTORY" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
                              Margin="4"
+                              Checked="RadioButton_Checked"   
                              FontSize="20"
                              IsChecked="False"
                              
                              Content="LIVE" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
                              Margin="4"
+                             Checked="RadioButton_Checked"   
                              IsChecked="False"
                              FontSize="20"
                              
                              Content="STATISTIK" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
                              Margin="4"
+                             Checked="RadioButton_Checked"    
                              IsChecked="False"
                              FontSize="20"
                              Content="PROFILE" />
@@ -89,17 +96,37 @@
             </ScrollViewer>
             
 
-        </materialDesign:ColorZone>
+        </Grid>
+        </Border>
 
-        <Button Grid.Row="0" BorderBrush="DarkGray" Background="DarkGray" Height="50" Width="40" Opacity="0.5" HorizontalAlignment="Right" Click="Button_Click" >
-            <materialDesign:PackIcon Kind="ChevronRight" Foreground="Black" Panel.ZIndex="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="23" Width="24"  />
-        </Button>
+        <!--<Button Grid.Row="0" BorderBrush="DarkGray" Background="DarkGray" Height="50" Width="40" Opacity="0.5" HorizontalAlignment="Right" Click="Button_Click" >
+            <materialDesign:PackIcon Kind="ChevronRight" Foreground="White" Panel.ZIndex="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="23" Width="24"  />
+        </Button>-->
 
 
 
         <Grid Grid.Row="1">
-            
 
+            <materialDesign:DialogHost
+  VerticalAlignment="Center"
+  IsOpen="{Binding IsSample4DialogOpen}"
+  DialogContent="{Binding Sample4Content}"
+  CloseOnClickAway="True"
+  OverlayBackground="{DynamicResource PrimaryHueDarkBrush}"
+  DialogTheme="Inherit">
+                <Border
+    BorderThickness="1"
+    BorderBrush="{DynamicResource PrimaryHueMidBrush}"
+    MinWidth="256"
+    MinHeight="256"
+    ClipToBounds="True">
+                    <Button
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+      Command="{Binding OpenSample4DialogCommand}"
+      Content="RUN" />
+                </Border>
+            </materialDesign:DialogHost>
         </Grid>
 
     </Grid>

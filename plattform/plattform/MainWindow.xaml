@@ -14,11 +14,27 @@
         Background="{DynamicResource MaterialDesignBackground}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="800" Width="1200"
-        WindowStartupLocation="CenterScreen"
+        WindowStartupLocation="CenterScreen" 
         >
 
     <Grid>
-        <Frame x:Name="myFrame" NavigationUIVisibility="Hidden" Content="{Binding CurrentPage , Converter={local:ApplicationPageValueConverter}}" ></Frame>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid  Grid.Row="0" Background="#023E63" >
+            
+            <Button x:Name="back"  Click="Back_Click" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" >
+                <materialDesign:PackIcon Kind="ChevronLeft" Width="30" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Margin="60 0 0 0"  Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" >
+                <materialDesign:PackIcon Kind="ChevronRight" Width="30" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            
+        </Grid>
+       
+        <Frame x:Name="myFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Content="{Binding CurrentPage , Converter={local:ApplicationPageValueConverter}}" ></Frame>
     </Grid>
     
 </Window>

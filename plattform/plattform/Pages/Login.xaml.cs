@@ -32,14 +32,33 @@ namespace plattform
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            if(check.IsChecked == true)
+            {
+                WindowViewModel.CurrentPage = ApplicationPage.OffCanvas;
+                ((MainWindow)Application.Current.MainWindow).DataContext = new WindowViewModel(((MainWindow)Application.Current.MainWindow));
+            }else
+            {
+                SnackbarTwo.IsActive = true;
+                borderAGP.BorderThickness = new Thickness(1);
+            }
             
-
-            WindowViewModel.CurrentPage = ApplicationPage.CollapsipleMenu;
-            ((MainWindow)Application.Current.MainWindow).DataContext = new WindowViewModel(((MainWindow)Application.Current.MainWindow));
-
         }
-        
+
+        private void DialogHost_DialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
+        {
+            
+        }
+
+        private void Cancel(object sender, RoutedEventArgs e)
+        {
+            check.IsChecked = false;
+        }
+        private void Accept(object sender, RoutedEventArgs e)
+        {
+            check.IsChecked = true;
+            borderAGP.BorderThickness = new Thickness(0);
+            SnackbarTwo.IsActive = false;
+        }
     }
 }
 //WindowViewModel.CurrentPage = ApplicationPage.Tab;

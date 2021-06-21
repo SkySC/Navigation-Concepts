@@ -9,21 +9,57 @@
       d:DesignHeight="600" d:DesignWidth="800"
       Title="Login">
 
-    <Grid>
+    <materialDesign:DialogHost DialogClosing="DialogHost_DialogClosing" 
+                               Style="{StaticResource MaterialDesignEmbeddedDialogHost}"
+                               DialogMargin="8">
+        <materialDesign:DialogHost.DialogContent>
+            <StackPanel Margin="16">
+                <Label Content="Ich akzeptiere die allgemeine Geschäftsprozesse." ></Label>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Style="{StaticResource MaterialDesignFlatButton}"
+                            IsDefault="True"
+                            Margin="0 8 8 0"
+                            Content="ACCEPT"
+                            Click="Accept"
+                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
+                        <Button.CommandParameter>
+                            <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                True
+                            </system:Boolean>
+                        </Button.CommandParameter>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFlatButton}"
+                            IsCancel="True"
+                            Margin="0 8 8 0"
+                            Content="CANCEL"
+                            Click="Cancel"
+                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
+                        <Button.CommandParameter>
+                            <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                False
+                            </system:Boolean>
+                        </Button.CommandParameter>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </materialDesign:DialogHost.DialogContent>
+        <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                 <GradientStop Color="#000746" Offset="0"/>
                 <GradientStop Color="#155378" Offset="0.3"/>
                 <GradientStop Color="#5D0997" Offset="0.5"/>
                 <GradientStop Color="#AA6874" Offset="0.8"/>
-                <GradientStop Color="#CFAD82" Offset="0.9"/>
+               
                 <GradientStop Color="#BE798E" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Border Height="500" Width="400" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="45" Background="White"  >
+        
+        <Border Height="Auto" Width="400" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="45" Background="White"  >
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" x:Name="stk_Login" Width="300">
-                
+                <Label Content="Login" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="35"></Label>
                 <materialDesign:PackIcon Kind="AccountCircle" Height="120" Width="120" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 40 0 0"/>
 
                 
@@ -47,17 +83,18 @@
                     
                 </StackPanel>
 
-                <!--<StackPanel Margin="0 20 0 0" Orientation="Horizontal">
-                    <ToggleButton  Content="C" Style="{StaticResource MaterialDesignActionAccentToggleButton}" IsChecked="False"
-                      ToolTip="MaterialDesignActionAccentToggleButton" />
-                    <TextBlock  Padding="20 0 0 0" Text="Ich azcept die AGP" VerticalAlignment="Center"/>
-                </StackPanel>-->
-                
+                    <Border x:Name="borderAGP" Margin="0 20" BorderBrush="Red" BorderThickness="0" >
+                        <CheckBox  x:Name="check" Padding="10 0 0 0"  Style="{StaticResource MaterialDesignCheckBox}"  Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Tag="True" Content="Ich akzeptiere die AGP">
 
-                
+                        </CheckBox>
+                    </Border>
 
+                  
+
+
+                    <!--Login-->
                 <Grid
-                    Width="150" Margin="0 30 0 0">
+                    Width="150" Margin="0 30">
                     <Button
                          Style="{StaticResource MaterialDesignRaisedDarkButton}"
                          Height="40"
@@ -68,13 +105,20 @@
                         
                     </Button>
                     
+                    
                 </Grid>
+                
 
                 
             </StackPanel>
             
         </Border>
-        
-        
-    </Grid>
+
+            <!-- Snackbar -->
+            <materialDesign:Snackbar Height="50" Width="400" x:Name="SnackbarTwo" IsActive="False">
+                <materialDesign:SnackbarMessage Content="Bitte, akzeptieren Sie die AGP" ActionClick="Accept" ActionContent="AKZEPTIEREN" />
+            </materialDesign:Snackbar>
+
+        </Grid>
+    </materialDesign:DialogHost>
 </Page>

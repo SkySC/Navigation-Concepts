@@ -18,7 +18,14 @@ namespace plattform
                     return new Tab();
                 case ApplicationPage.CollapsipleMenu:
                     return new CollapsibleMenu();
-
+                case ApplicationPage.HamburgerMenu:
+                    return new HamburgerMenu();
+                case ApplicationPage.OffCanvas:
+                    return new OffCanvasMenu();
+                case ApplicationPage.MultiLevelNavigation:
+                    return new MultiLevelNavigation();
+                case ApplicationPage.Navigationen:
+                    return new Navigationen();
                 default:
                     Debugger.Break();
                     return null;

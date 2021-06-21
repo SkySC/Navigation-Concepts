@@ -31,3 +31,9 @@ C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Pa
 C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Pages\Login.baml
 C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Menus\CollapsibleMenu.g.cs
 C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Menus\CollapsibleMenu.baml
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Menus\OffCanvasMenu.g.cs
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Menus\OffCanvasMenu.baml
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\MultiLevelNavigation.g.cs
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\MultiLevelNavigation.baml
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Navigationen.g.cs
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Navigationen.baml

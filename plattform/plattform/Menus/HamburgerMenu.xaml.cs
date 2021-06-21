@@ -23,6 +23,7 @@ namespace plattform
         public HamburgerMenu()
         {
             InitializeComponent();
+            frame.Content = new Tab();
         }
 
         private void tgl2_Checked(object sender, RoutedEventArgs e)
@@ -41,6 +42,16 @@ namespace plattform
         private void tgl1_Unchecked(object sender, RoutedEventArgs e)
         {
             tgl2.IsChecked = false;
+        }
+
+        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
