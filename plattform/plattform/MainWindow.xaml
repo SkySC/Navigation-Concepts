@@ -12,29 +12,97 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignBackground}"
+        
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="MainWindow" Height="800" Width="1200"
-        WindowStartupLocation="CenterScreen" 
+        Title="MainWindow" Height="800" Width="1250"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
+        MinHeight="700" MinWidth="1150"
+        AllowsTransparency="True"
         >
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"
+            GlassFrameThickness="0"
+            CaptionHeight="1" CornerRadius="0" >
+            
+        </WindowChrome>
+    </WindowChrome.WindowChrome>
+    <Border BorderBrush="Gray" BorderThickness="1" x:Name="OuterBorder" Margin="6">
+    <DockPanel x:Name="RootWindow"  >
+        <DockPanel x:Name="TitleBar" MouseDown="TitleBar_MouseDown" DockPanel.Dock="Top" Background="#023E63" Height="35">
+            <Button  x:Name="CloseButton" Foreground="White" Background="Transparent" BorderBrush="Transparent" 
+                    Click="CloseButton_Click"                 
+                    DockPanel.Dock="Right" >
+                <materialDesign:PackIcon Kind="WindowClose" />
+            </Button>
+            <Button x:Name="MaximizeButton" Foreground="White" Background="Transparent" BorderBrush="Transparent" 
+                    Click="MaximizeButton_Click"
+                    DockPanel.Dock="Right" >
+                <materialDesign:PackIcon x:Name="maxi" Kind="DockWindow" />
+            </Button>
+            <Button x:Name="MinButton" Foreground="White"  Background="Transparent" BorderBrush="Transparent" 
+                    Click="MinimizeButton_Click"
+                    DockPanel.Dock="Right" >
+                <materialDesign:PackIcon Kind="WindowMinimize" />
+            </Button>
 
-        <Grid  Grid.Row="0" Background="#023E63" >
+            <TextBlock HorizontalAlignment="Center" Foreground="White" VerticalAlignment="Center">Application Name</TextBlock>
+        </DockPanel>
+        
             
-            <Button x:Name="back"  Click="Back_Click" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" >
-                <materialDesign:PackIcon Kind="ChevronLeft" Width="30" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </Button>
-            <Button Margin="60 0 0 0"  Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" >
-                <materialDesign:PackIcon Kind="ChevronRight" Width="30" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </Button>
-            
+      
+        <Grid DockPanel.Dock="Bottom" >
+
+            <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Frame Panel.ZIndex="-1" BorderBrush="Transparent" x:Name="myFrame" Grid.Row="0"  NavigationUIVisibility="Hidden" Content="{Binding CurrentPage , Converter={local:ApplicationPageValueConverter}}" ></Frame>
+            <materialDesign:Card  Grid.Row="1" Height="70" materialDesign:ShadowAssist.ShadowDepth="Depth1" >
+                   
+                <Grid >
+                        <Separator VerticalAlignment="Top" Width="2" Background="Black"></Separator>
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                        <Border  Height="60" Width="60" Margin="50 0 0 0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="{Binding SongImg}"></ImageBrush>
+                            </Border.Background>
+                        </Border>
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="{Binding SongName}" FontSize="15" FontWeight="Light" Foreground="Gray" ></Label>
+                            <Label Content="{Binding SangerName}" FontSize="10" FontWeight="Light" Foreground="Gray" ></Label>
+                        </StackPanel>
+                     
+                     
+                 </StackPanel>
+                    <StackPanel Orientation="Vertical" Background="White">
+                        <StackPanel Margin="0 10 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Button Background="Transparent" BorderBrush="Transparent">
+                                    <materialDesign:PackIcon  Foreground="Black" Kind="SkipPrevious" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                            </Button>
+
+                            <Button Background="Transparent" BorderBrush="Transparent"  Click="PlaySong">
+                                    <materialDesign:PackIcon x:Name="PlayIcon"  Foreground="Black" Kind="Play" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                            </Button>
+
+                            <Button Background="Transparent" BorderBrush="Transparent">
+                                    <materialDesign:PackIcon   Foreground="Black" Kind="SkipNext" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                            </Button>
+
+                        </StackPanel>
+                        <Slider Width="600" ></Slider>
+                    </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 30 0" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="VolumeHigh" Height="30" Width="30" Margin="0 0 10 -5"/>
+                            <Slider x:Name="slider" Orientation="Horizontal" Minimum="0" Width="100" Maximum="50" Value="10" SelectionStart="30" SelectionEnd="50" IsSelectionRangeEnabled="True" Margin="0 10 0 0"/>
+                        </StackPanel>
+                        <MediaElement HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="100" x:Name="player" LoadedBehavior="Manual"/>
+                    </Grid>
+            </materialDesign:Card>
         </Grid>
-       
-        <Frame x:Name="myFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Content="{Binding CurrentPage , Converter={local:ApplicationPageValueConverter}}" ></Frame>
-    </Grid>
-    
+    </DockPanel>
+
+    </Border>
 </Window>

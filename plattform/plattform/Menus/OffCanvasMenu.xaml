@@ -10,141 +10,21 @@
       Title="OffCanvasMenu">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid x:Name="nav_pnl"  HorizontalAlignment="Left" Grid.Column="0" Width="0" 
-               Background ="White" 
-               ZIndex ="2">
-
-        <ScrollViewer HorizontalScrollBarVisibility="Hidden" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" >    
-        <StackPanel Orientation="Vertical" >
-                <Image Source="pack://application:,,,/Assets/hsWorms.jpg" Width="90" Height="90" ></Image>
-
-                <ListView FontSize="18">
-                    <ListViewItem   >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Home" Height="30" Width="30" />
-                            <Label Content="Startseite" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
-                        </StackPanel>
-
-                    </ListViewItem>
-                        <ListViewItem >
-                            <Expander Background="Transparent"  Width="230" Margin="10 0 0 0">
-                                    <Expander.Header>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                                        <materialDesign:PackIcon Kind="FormatListBulletedSquare" Margin="-35 0 0 0" Height="30" Width="30"/>
-                                        <Label Content="Kategorien" Margin="10 0 0 0"></Label>
-                                    </StackPanel>
-                                   
-                                    </Expander.Header>
-                                    <StackPanel Orientation="Vertical">
-                                    <Button Width="200" Background="Transparent" BorderBrush="Transparent" Content="Tab1" Padding="-80 0 0 0" Foreground="Black"></Button>
-
-                                    </StackPanel>
-                                </Expander>
-
-                            
-                            
-
-                        </ListViewItem>
-                        <ListViewItem  >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ViewListOutline"  Height="30" Width="30" />
-                            <Label Content="Bestellugnen" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
-                        </StackPanel>
-
-                    </ListViewItem>
-                    <ListViewItem   >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Cart" Height="30" Width="30" />
-                            <Label Content="Warenkorb" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
-                        </StackPanel>
-
-                    </ListViewItem>
-                    <ListViewItem   >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Account" Height="30" Width="30" />
-                            <Label Content="Mein Konto" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
-                        </StackPanel>
-
-                    </ListViewItem>
-                    <Separator Width="220" Background="Black" Height="5"></Separator>
-                    <ListViewItem   >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Star" Height="30" Width="30" />
-                            <Label Content="Favoriten" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
-                        </StackPanel>
-
-                    </ListViewItem>
-                    <ListViewItem   >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Heart" Height="30" Width="30" />
-                            <Label Content="Wünschliste" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
-                        </StackPanel>
-
-                    </ListViewItem>
-
-
-                    <Separator Width="220" Background="Black" Height="5" ></Separator>
-                    <ListViewItem   >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Settings" Height="30" Width="30" />
-                            <Label Content="Einstellungen" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
-                        </StackPanel>
-
-                    </ListViewItem>
-                    <ListViewItem   >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="FaceAgent" Height="30" Width="30" />
-                            <Label Content="Kundenservice" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
-                        </StackPanel>
-
-                    </ListViewItem>
-                    <ListViewItem   >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Help" Height="30" Width="30" />
-                            <Label Content="Hilfe" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
-                        </StackPanel>
-
-                    </ListViewItem>
-                    <Separator Width="220" Background="Black" Height="5" ></Separator>
-                        <ListViewItem   >
-                            <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="Logout" Height="30" Width="30" />
-                                <Label Content="Abmelden" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
-                            </StackPanel>
-
-                        </ListViewItem>
-
-
-
-                    </ListView>
-
-
-
-
-            </StackPanel>
-            </ScrollViewer>
-
-
-
-        </Grid >
-
-
-
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Background="#023E63">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        
+        <Grid Grid.Row="0">
+            
+            <Grid Background="#023E63">
                 <DockPanel>
                     
                     <Grid>
-                        <ToggleButton x:Name="tgl" VerticalAlignment="Stretch" HorizontalAlignment="Left"
-                                 Style="{DynamicResource MaterialDesignHamburgerToggleButton}" Foreground="White">
+                        <Border CornerRadius="10" Height="40" Width="40" HorizontalAlignment="Left"  Margin="10 0 0 0">
+                        <ToggleButton x:Name="tgl" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                 Style="{DynamicResource MaterialDesignHamburgerToggleButton}" Foreground="White" >
                             <ToggleButton.Triggers>
                                 <EventTrigger RoutedEvent="ToggleButton.Unchecked">
                                     <BeginStoryboard>
@@ -174,6 +54,7 @@
                                 </EventTrigger>
                             </ToggleButton.Triggers>
                         </ToggleButton>
+                        </Border>
 
                         <materialDesign:ColorZone 
                                
@@ -212,56 +93,164 @@
                                 </Button>
                             </Grid>
                         </materialDesign:ColorZone >
-                        <materialDesign:PopupBox DockPanel.Dock="Right" 
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+                            <Button Style="{StaticResource MaterialDesignIconButton}" Foreground="White" ToolTip="WarenKorb">
+                                <materialDesign:PackIcon Kind="Cart" />
+                            </Button>
+
+                            <ToggleButton Margin="10 0 10 0" Content="{materialDesign:PackIcon Kind=Bell, Size=20}"
+                                          Style="{StaticResource MaterialDesignFlatToggleButton}"
+                                          ToolTip="Benachrichtigung" Height="30" Width="30" 
+                                          IsChecked="False" VerticalAlignment="Center" Foreground="White"  HorizontalAlignment="Right"  >
+                                
+                                
+                            </ToggleButton>
+                            <materialDesign:PopupBox DockPanel.Dock="Right" 
                                                  PlacementMode="BottomAndAlignRightEdges"
                                                  HorizontalAlignment="Right"
                                                  Foreground="White">
-                            <ListBox >
-                                <ListBoxItem Content="Hello World" />
-                                <ListBoxItem Content="Nice Popup" />
-                                <ListBoxItem Content="Goodbye" />
-                            </ListBox>
-                        </materialDesign:PopupBox>
-                        
-                        <materialDesign:Chip Content="Warenkorb" IconBackground="Gray"
-                                             IconForeground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-                                             HorizontalAlignment="Right" Click="Chip_Click"
-                                             Margin="0 0 100 0" FontSize="10" Background="LightBlue">
-                            <materialDesign:Chip.Icon>
-                                <materialDesign:PackIcon Kind="Cart" />
-                            </materialDesign:Chip.Icon>
-                        </materialDesign:Chip>
-                        <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}"
-                                                 PlacementMode="BottomAndAlignCentres"
-                                                 ToggleCheckedContentCommand="{Binding FloatingActionDemoCommand}"
-                                                 ToggleCheckedContentCommandParameter="wowsers"
-                                                 ToolTip="PopupBox, Style MaterialDesignMultiFloatingActionAccentPopupBox"
-                                                 Margin="0 0 30 0" HorizontalAlignment="Right">
-                            <materialDesign:PopupBox.ToggleCheckedContent>
-                                <materialDesign:PackIcon Kind="Pencil"
-                                                         Width="24"
-                                                         Height="24" />
-                            </materialDesign:PopupBox.ToggleCheckedContent>
-                            <StackPanel>
-                                <Button
-      ToolTip="One"
-      Content="1" />
-                                <Button
-      ToolTip="Two"
-      IsEnabled="False"
-      Content="2" />
-                                <Button
-      ToolTip="Three"
-      Content="3" />
-                            </StackPanel>
-                        </materialDesign:PopupBox>
+                                <ListBox >
+                                    <ListBoxItem Content="Hello World" />
+                                    <ListBoxItem Content="Nice Popup" />
+                                    <ListBoxItem Content="Goodbye" />
+                                </ListBox>
+                            </materialDesign:PopupBox>
 
+                        </StackPanel>
+                        
+                       
 
 
                     </Grid>
                 </DockPanel>
             </Grid>
-            <Frame Grid.Row="1" Name="frameOffCanvas" NavigationUIVisibility="Hidden"/>
+            
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="nav_pnl"  HorizontalAlignment="Left" Grid.Row="1" Width="0" 
+               Background ="White" 
+               ZIndex ="2">
+
+                <ScrollViewer HorizontalScrollBarVisibility="Hidden" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" >
+                    <StackPanel Orientation="Vertical" >
+                        <Image Source="pack://application:,,,/Assets/hsWorms.jpg" Width="90" Height="90" ></Image>
+
+                        <ListView FontSize="18">
+                            <ListViewItem   >
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Home" Height="30" Width="30" />
+                                    <Label Content="Startseite" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                                </StackPanel>
+
+                            </ListViewItem>
+                            <ListViewItem >
+                                <Expander Background="Transparent"  Width="230" Margin="10 0 0 0">
+                                    <Expander.Header>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                            <materialDesign:PackIcon Kind="FormatListBulletedSquare" Margin="-35 0 0 0" Height="30" Width="30"/>
+                                            <Label Content="Kategorien" Margin="10 0 0 0"></Label>
+                                        </StackPanel>
+
+                                    </Expander.Header>
+                                    <StackPanel Orientation="Vertical">
+                                        <Button Width="200" Background="Transparent" BorderBrush="Transparent" Content="Tab1" Padding="-80 0 0 0" Foreground="Black"></Button>
+
+                                    </StackPanel>
+                                </Expander>
+
+
+
+
+                            </ListViewItem>
+                            <ListViewItem  >
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="ViewListOutline"  Height="30" Width="30" />
+                                    <Label Content="Bestellugnen" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                                </StackPanel>
+
+                            </ListViewItem>
+                            <ListViewItem   >
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Cart" Height="30" Width="30" />
+                                    <Label Content="Warenkorb" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                                </StackPanel>
+
+                            </ListViewItem>
+                            <ListViewItem   >
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Account" Height="30" Width="30" />
+                                    <Label Content="Mein Konto" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                                </StackPanel>
+
+                            </ListViewItem>
+                            <Separator Width="220" Background="Black" Height="5"></Separator>
+                            <ListViewItem   >
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Star" Height="30" Width="30" />
+                                    <Label Content="Favoriten" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                                </StackPanel>
+
+                            </ListViewItem>
+                            <ListViewItem   >
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Heart" Height="30" Width="30" />
+                                    <Label Content="Wünschliste" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                                </StackPanel>
+
+                            </ListViewItem>
+
+
+                            <Separator Width="220" Background="Black" Height="5" ></Separator>
+                            <ListViewItem   >
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Settings" Height="30" Width="30" />
+                                    <Label Content="Einstellungen" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                                </StackPanel>
+
+                            </ListViewItem>
+                            <ListViewItem   >
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="FaceAgent" Height="30" Width="30" />
+                                    <Label Content="Kundenservice" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                                </StackPanel>
+
+                            </ListViewItem>
+                            <ListViewItem   >
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Help" Height="30" Width="30" />
+                                    <Label Content="Hilfe" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                                </StackPanel>
+
+                            </ListViewItem>
+                            <Separator Width="220" Background="Black" Height="5" ></Separator>
+                            <ListViewItem   >
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Logout" Height="30" Width="30" />
+                                    <Label Content="Abmelden" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                                </StackPanel>
+
+                            </ListViewItem>
+
+
+
+                        </ListView>
+
+
+
+
+                    </StackPanel>
+                </ScrollViewer>
+
+
+
+            </Grid >
+            <Frame Grid.Column="1" Name="frameOffCanvas" NavigationUIVisibility="Hidden"/>
         </Grid>
         
     </Grid>

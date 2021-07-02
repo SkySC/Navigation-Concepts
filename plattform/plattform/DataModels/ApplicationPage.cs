@@ -5,12 +5,15 @@ namespace plattform
     public enum ApplicationPage
     {
         Login = 0,
-        Tab = 1,
-        CollapsipleMenu = 2,
-        HamburgerMenu = 3,
-        OffCanvas = 4,
-        MultiLevelNavigation = 5,
-        Navigationen = 6,
+        Register = 1,
+        Startseite = 2,
+        MainMenu = 3,
+        Kategorien = 4,
+        Konto = 5,
+        Suche = 6,
+        Tab = 7,
+        Search = 8,
+
         
     }
 }

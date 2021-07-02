@@ -1,0 +1,21 @@
+﻿<Page x:Class="plattform.Search"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:plattform"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Search">
+
+    <Grid Background="#FFFFFF">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 30 0 0">
+            <Label Content="Suchergebnisse für "  FontSize="25"/>
+            <Label x:Name="ergebnis" Content=""  FontSize="25"/>
+        </StackPanel>
+        
+
+
+    </Grid>
+</Page>

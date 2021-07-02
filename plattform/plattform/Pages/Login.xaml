@@ -14,13 +14,18 @@
                                DialogMargin="8">
         <materialDesign:DialogHost.DialogContent>
             <StackPanel Margin="16">
-                <Label Content="Ich akzeptiere die allgemeine Geschäftsprozesse." ></Label>
+                <Label Content="Bitte, Geben Sie Ihre E-Mail ein" ></Label>
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <materialDesign:PackIcon Kind="Account" Height="20" Width="20" VerticalAlignment="Bottom" Margin="0 0 10 0"/>
+                    <TextBox materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         VerticalAlignment="Center" Width="250" />
+                </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button Style="{StaticResource MaterialDesignFlatButton}"
                             IsDefault="True"
                             Margin="0 8 8 0"
-                            Content="ACCEPT"
+                            Content="Senden"
                             Click="Accept"
                             Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
                         <Button.CommandParameter>
@@ -32,7 +37,7 @@
                     <Button Style="{StaticResource MaterialDesignFlatButton}"
                             IsCancel="True"
                             Margin="0 8 8 0"
-                            Content="CANCEL"
+                            Content="Abbrechen"
                             Click="Cancel"
                             Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
                         <Button.CommandParameter>
@@ -44,22 +49,27 @@
                 </StackPanel>
             </StackPanel>
         </materialDesign:DialogHost.DialogContent>
-        <Grid>
-        <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#000746" Offset="0"/>
-                <GradientStop Color="#155378" Offset="0.3"/>
-                <GradientStop Color="#5D0997" Offset="0.5"/>
-                <GradientStop Color="#AA6874" Offset="0.8"/>
-               
-                <GradientStop Color="#BE798E" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-
+        <Grid Background="#023E63">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <!--Banner-->
+            <Grid Grid.Row="0" Height="0" x:Name="Banner" Background="#323232">
+                <StackPanel Orientation="Vertical">
+                    <Label  Content="Wir haben an Sie eine E-Mail mit Passwordzurücksetzen gesendet. Bitte, Überprüfen Sie Ihr Inbox." FontSize="15" Padding="10" Foreground="White"></Label>
+                    <Button HorizontalAlignment="Right" Background="Transparent" Content="Verstanden" Foreground="MediumPurple" BorderBrush="Transparent" Click="Button_Click"></Button>
+                </StackPanel>
+                
+            </Grid>
+            
+            <!--Rest Anmelden-->
+            <Grid Grid.Row="1">
         
         <Border Height="Auto" Width="400" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="45" Background="White"  >
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" x:Name="stk_Login" Width="300">
-                <Label Content="Login" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="35"></Label>
+                <Label Content="Anmelden" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="35"></Label>
                 <materialDesign:PackIcon Kind="AccountCircle" Height="120" Width="120" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 40 0 0"/>
 
                 
@@ -83,42 +93,56 @@
                     
                 </StackPanel>
 
-                    <Border x:Name="borderAGP" Margin="0 20" BorderBrush="Red" BorderThickness="0" >
-                        <CheckBox  x:Name="check" Padding="10 0 0 0"  Style="{StaticResource MaterialDesignCheckBox}"  Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Tag="True" Content="Ich akzeptiere die AGP">
 
-                        </CheckBox>
-                    </Border>
+                   
 
-                  
 
 
                     <!--Login-->
                 <Grid
-                    Width="150" Margin="0 30">
+                    Width="250" Margin="0 30">
                     <Button
                          Style="{StaticResource MaterialDesignRaisedDarkButton}"
                          Height="40"
                          materialDesign:ButtonAssist.CornerRadius="20"
-                         ToolTip="Login" Click="Button_Click">
+                         ToolTip="Login" Click="login">
                         <TextBlock
-                         Text="Login" />
+                         Text="Anmelden" />
                         
                     </Button>
                     
                     
                 </Grid>
-                
+                    <Button  HorizontalAlignment="Left" x:Name="check" Background="Transparent" BorderBrush="Transparent" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" FontSize="12">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Password vergessen?"/>
+                                <Label Content="Password zurücksetzen" Foreground="Blue"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
 
-                
-            </StackPanel>
+
+                    <Button HorizontalAlignment="Left" FontSize="12" Height="32" Background="Transparent" BorderBrush="Transparent"   Click="register" Margin="0 0 0 30">
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Content="Haben Sie kein Konto?"/>
+                            <Label Content="Registrieren" Foreground="Blue" />
+                        </StackPanel>
+                    </Button>
+
+
+
+                </StackPanel>
             
         </Border>
 
             <!-- Snackbar -->
-            <materialDesign:Snackbar Height="50" Width="400" x:Name="SnackbarTwo" IsActive="False">
-                <materialDesign:SnackbarMessage Content="Bitte, akzeptieren Sie die AGP" ActionClick="Accept" ActionContent="AKZEPTIEREN" />
-            </materialDesign:Snackbar>
 
+                <materialDesign:Snackbar Margin="0 0 0 50" x:Name="Snackbar" MessageQueue="{materialDesign:MessageQueue}"   >
+                    
+                </materialDesign:Snackbar>
+
+            </Grid>
         </Grid>
     </materialDesign:DialogHost>
 </Page>

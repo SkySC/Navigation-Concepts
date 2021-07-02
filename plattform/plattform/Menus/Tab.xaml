@@ -11,16 +11,8 @@
       MinWidth="600"
       Title="Tab">
 
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#155378" Offset="0"/>
-               
-                <GradientStop Color="#2F3136" Offset="0.9"/>
-                
-                
-            </LinearGradientBrush>
-        </Grid.Background>
+    <Grid Background="White">
+        
 
         <Grid.RowDefinitions>
 
@@ -32,10 +24,10 @@
 
 
         <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0.5" >
-        <Grid  Height="40" Background="#316280">
+            <Grid  Height="40" Background="#FFFFFF">
 
 
-            <ScrollViewer x:Name="scrollerTab" VerticalAlignment="Top" HorizontalScrollBarVisibility="Hidden"  VerticalScrollBarVisibility="Disabled" Foreground="White" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+            <ScrollViewer x:Name="scrollerTab" VerticalAlignment="Top" HorizontalScrollBarVisibility="Hidden"  VerticalScrollBarVisibility="Disabled" Foreground="Black" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
                 <WrapPanel Orientation="Horizontal" Margin="10 0 0 0">
 
                     <RadioButton x:Name="firstTab" Style="{StaticResource MaterialDesignTabRadioButton}"
@@ -107,26 +99,7 @@
 
         <Grid Grid.Row="1">
 
-            <materialDesign:DialogHost
-  VerticalAlignment="Center"
-  IsOpen="{Binding IsSample4DialogOpen}"
-  DialogContent="{Binding Sample4Content}"
-  CloseOnClickAway="True"
-  OverlayBackground="{DynamicResource PrimaryHueDarkBrush}"
-  DialogTheme="Inherit">
-                <Border
-    BorderThickness="1"
-    BorderBrush="{DynamicResource PrimaryHueMidBrush}"
-    MinWidth="256"
-    MinHeight="256"
-    ClipToBounds="True">
-                    <Button
-      HorizontalAlignment="Center"
-      VerticalAlignment="Center"
-      Command="{Binding OpenSample4DialogCommand}"
-      Content="RUN" />
-                </Border>
-            </materialDesign:DialogHost>
+           
         </Grid>
 
     </Grid>

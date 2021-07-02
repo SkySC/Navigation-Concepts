@@ -41,7 +41,7 @@ namespace plattform
         {
             if (firstTab.IsChecked == true)
             {
-                WindowViewModel.CurrentPage = ApplicationPage.OffCanvas;
+                //WindowViewModel.CurrentPage = ApplicationPage.MainMenu;
             }
             else
             {

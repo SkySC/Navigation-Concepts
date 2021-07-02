@@ -23,8 +23,8 @@ namespace plattform
         public OffCanvasMenu()
         {
             InitializeComponent();
-            WindowViewModel.CurrentPage = ApplicationPage.Tab;
-            frameOffCanvas.Content = new Tab();
+            WindowViewModel.CurrentPage = ApplicationPage.Startseite;
+            frameOffCanvas.Content = new Startseite();
         }
 
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)

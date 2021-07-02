@@ -30,18 +30,10 @@ namespace plattform
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void login(object sender, RoutedEventArgs e)
         {
-            if(check.IsChecked == true)
-            {
-                WindowViewModel.CurrentPage = ApplicationPage.OffCanvas;
-                ((MainWindow)Application.Current.MainWindow).DataContext = new WindowViewModel(((MainWindow)Application.Current.MainWindow));
-            }else
-            {
-                SnackbarTwo.IsActive = true;
-                borderAGP.BorderThickness = new Thickness(1);
-            }
-            
+           WindowViewModel.CurrentPage = ApplicationPage.MainMenu;
+            ((MainWindow)Application.Current.MainWindow).DataContext = new WindowViewModel(((MainWindow)Application.Current.MainWindow));
         }
 
         private void DialogHost_DialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
@@ -51,15 +43,31 @@ namespace plattform
 
         private void Cancel(object sender, RoutedEventArgs e)
         {
-            check.IsChecked = false;
+            
         }
         private void Accept(object sender, RoutedEventArgs e)
         {
-            check.IsChecked = true;
-            borderAGP.BorderThickness = new Thickness(0);
-            SnackbarTwo.IsActive = false;
+            Banner.Height = 75;
+            Snackbar.MessageQueue.Enqueue("Wir haben eine E-Mail an Sie geschickt.", "OK" ,Snackbar.MessageQueue.Clear);
+            Snackbar.MessageQueue.Enqueue("Es Kann einige Minuten dauern, bevor Sie die E-Mail erhalten haben.", "OK", Snackbar.MessageQueue.Clear);
+            Snackbar.MessageQueue.Enqueue("Bitte, Schauen Sie auch im Spam!", "OK", Snackbar.MessageQueue.Clear);
+            Snackbar.MessageQueue.Enqueue("Bitte, Haben Sie Geduld!", "OK", Snackbar.MessageQueue.Clear);
+            
+            Snackbar.ActionButtonPlacement = MaterialDesignThemes.Wpf.SnackbarActionButtonPlacementMode.Inline;
+            
         }
+
+        private void register(object sender, RoutedEventArgs e)
+        {
+            WindowViewModel.CurrentPage = ApplicationPage.Register;
+            ((MainWindow)Application.Current.MainWindow).DataContext = new WindowViewModel(((MainWindow)Application.Current.MainWindow));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Banner.Height = 0;
+        }
+
+        
     }
 }
-//WindowViewModel.CurrentPage = ApplicationPage.Tab;
-//((MainWindow)Application.Current.MainWindow).DataContext = new WindowViewModel(((MainWindow)Application.Current.MainWindow));
