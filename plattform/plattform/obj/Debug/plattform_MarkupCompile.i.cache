@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\App.xaml
-10-1496936761
+131987372027
 11080916670
-21-1452154845
+271261502561
 15931707062
-MainMenu.xaml;Menus\CollapsibleMenu.xaml;Menus\OffCanvasMenu.xaml;Pages\Login.xaml;Menus\HamburgerMenu.xaml;MainWindow.xaml;Menus\Tab.xaml;Pages\Register.xaml;Pages\Startseite.xaml;Search.xaml;
+Pages\Library.xaml;Pages\Kategorie.xaml;MainMenu.xaml;Menus\CollapsibleMenu.xaml;Menus\OffCanvasMenu.xaml;Pages\Login.xaml;Menus\HamburgerMenu.xaml;MainWindow.xaml;Menus\Tab.xaml;Pages\Register.xaml;Pages\Startseite.xaml;Pages\Search.xaml;Pages\Songlist.xaml;
 
 True
 

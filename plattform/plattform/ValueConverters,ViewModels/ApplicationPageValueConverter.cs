@@ -13,13 +13,17 @@ namespace plattform
             switch ((ApplicationPage)value)
             {
                 case ApplicationPage.Login:
+                    WindowViewModel.PlayerCard = 0;
                     return new Login();
                 case ApplicationPage.Tab:
                     return new Tab();
-                
+                case ApplicationPage.Songlist:
+                    return new Songlist();
                 case ApplicationPage.Register:
+                    WindowViewModel.PlayerCard = 0;
                     return new Register();
                 case ApplicationPage.MainMenu:
+                    WindowViewModel.PlayerCard = 70;
                     return new MainMenu();
                 default:
                     Debugger.Break();

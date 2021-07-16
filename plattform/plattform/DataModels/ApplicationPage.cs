@@ -13,6 +13,9 @@ namespace plattform
         Suche = 6,
         Tab = 7,
         Search = 8,
+        Kategorie = 9,
+        Library = 10,
+        Songlist = 11,
 
         
     }

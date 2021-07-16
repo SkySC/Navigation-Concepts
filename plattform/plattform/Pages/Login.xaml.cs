@@ -33,7 +33,9 @@ namespace plattform
         private void login(object sender, RoutedEventArgs e)
         {
            WindowViewModel.CurrentPage = ApplicationPage.MainMenu;
+           
             ((MainWindow)Application.Current.MainWindow).DataContext = new WindowViewModel(((MainWindow)Application.Current.MainWindow));
+            
         }
 
         private void DialogHost_DialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
@@ -47,7 +49,7 @@ namespace plattform
         }
         private void Accept(object sender, RoutedEventArgs e)
         {
-            Banner.Height = 75;
+            Banner.Height = 50;
             Snackbar.MessageQueue.Enqueue("Wir haben eine E-Mail an Sie geschickt.", "OK" ,Snackbar.MessageQueue.Clear);
             Snackbar.MessageQueue.Enqueue("Es Kann einige Minuten dauern, bevor Sie die E-Mail erhalten haben.", "OK", Snackbar.MessageQueue.Clear);
             Snackbar.MessageQueue.Enqueue("Bitte, Schauen Sie auch im Spam!", "OK", Snackbar.MessageQueue.Clear);

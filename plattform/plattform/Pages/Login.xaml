@@ -23,18 +23,6 @@
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button Style="{StaticResource MaterialDesignFlatButton}"
-                            IsDefault="True"
-                            Margin="0 8 8 0"
-                            Content="Senden"
-                            Click="Accept"
-                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
-                        <Button.CommandParameter>
-                            <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
-                                True
-                            </system:Boolean>
-                        </Button.CommandParameter>
-                    </Button>
-                    <Button Style="{StaticResource MaterialDesignFlatButton}"
                             IsCancel="True"
                             Margin="0 8 8 0"
                             Content="Abbrechen"
@@ -46,6 +34,19 @@
                             </system:Boolean>
                         </Button.CommandParameter>
                     </Button>
+                    <Button Style="{StaticResource MaterialDesignFlatButton}"
+                            IsDefault="True"
+                            Margin="0 8 8 0"
+                            Content="Senden"
+                            Click="Accept"
+                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
+                        <Button.CommandParameter>
+                            <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                True
+                            </system:Boolean>
+                        </Button.CommandParameter>
+                    </Button>
+                    
                 </StackPanel>
             </StackPanel>
         </materialDesign:DialogHost.DialogContent>
@@ -57,10 +58,10 @@
             
             <!--Banner-->
             <Grid Grid.Row="0" Height="0" x:Name="Banner" Background="#323232">
-                <StackPanel Orientation="Vertical">
-                    <Label  Content="Wir haben an Sie eine E-Mail mit Passwordzurücksetzen gesendet. Bitte, Überprüfen Sie Ihr Inbox." FontSize="15" Padding="10" Foreground="White"></Label>
-                    <Button HorizontalAlignment="Right" Background="Transparent" Content="Verstanden" Foreground="MediumPurple" BorderBrush="Transparent" Click="Button_Click"></Button>
-                </StackPanel>
+                <Grid >
+                    <Label VerticalAlignment="Center" HorizontalAlignment="Center" Content="Wir haben an Sie eine E-Mail mit Passwordzurücksetzen gesendet. Bitte, Überprüfen Sie Ihr Inbox."  FontSize="15" Padding="10" Foreground="White"></Label>
+                    <Button HorizontalAlignment="Right" Background="Transparent" Content="Verstanden" Foreground="MediumPurple" BorderBrush="Transparent" Margin="0 0 20 0" Click="Button_Click"></Button>
+                </Grid>
                 
             </Grid>
             

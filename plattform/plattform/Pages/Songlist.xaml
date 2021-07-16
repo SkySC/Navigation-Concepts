@@ -1,0 +1,31 @@
+﻿<Page x:Class="plattform.Songlist"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:plattform"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="900"
+      Title="Songlist">
+
+    <Grid Background="White">
+        
+        <StackPanel Orientation="Vertical">
+            <Grid Height="300" Width="900" Background="#033D62" >
+                <Grid Height="150" Width="150" Background="Aqua" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50 0 0 0"></Grid>
+            </Grid>
+            <Grid Height="50" Width="900" Background="White" >
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="#" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="110 10 0 0" />
+                    <Label Content="Title" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="50 10 0 0" />
+                    <Label Content="Album" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="190 10 0 0"/>
+                    <Label Content="Künstler" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="100 10 0 0"/>
+                    <materialDesign:PackIcon Kind="ClockOutline" Foreground="Gray" Margin="150 20 0 0"/>
+                </StackPanel>
+                <Separator Width="700" VerticalAlignment="Bottom"></Separator>
+            </Grid>
+            <Grid Width="800" Height="50"></Grid>
+        </StackPanel>
+    </Grid>
+</Page>

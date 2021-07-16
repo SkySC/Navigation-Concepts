@@ -11,10 +11,6 @@
     <ScrollViewer>
         <Grid Background="#FFFFFF">
 
-
-            
-                
-            
             <Grid HorizontalAlignment="Center" Margin="20 0 20 0"  >
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
 

@@ -78,8 +78,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataModels\ApplicationNistedPage.cs" />
     <Compile Include="DataModels\SongModel.cs" />
     <Compile Include="ext.cs" />
+    <Compile Include="Pages\Library.xaml.cs">
+      <DependentUpon>Library.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kategorie.xaml.cs">
+      <DependentUpon>Kategorie.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
@@ -99,12 +106,25 @@
     <Compile Include="Pages\Startseite.xaml.cs">
       <DependentUpon>Startseite.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Search.xaml.cs">
+    <Compile Include="Pages\Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Songlist.xaml.cs">
+      <DependentUpon>Songlist.xaml</DependentUpon>
     </Compile>
     <Compile Include="ValueConverters,ViewModels\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters,ViewModels\BaseValueConverter.cs" />
+    <Compile Include="ValueConverters,ViewModels\CurrentNistedPageValueConverter.cs" />
+    <Compile Include="ValueConverters,ViewModels\PageViewModel.cs" />
     <Compile Include="ValueConverters,ViewModels\WindowViewModel.cs" />
+    <Page Include="Pages\Library.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Kategorie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -155,7 +175,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Search.xaml">
+    <Page Include="Pages\Search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Songlist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -187,9 +211,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserControl\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>

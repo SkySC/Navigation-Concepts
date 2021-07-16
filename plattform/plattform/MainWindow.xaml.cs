@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,8 @@ namespace plattform
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ObservableCollection<SongModel> PlayList = new ObservableCollection<SongModel>();
+       
+        private List<SongModel> PlayList = new List<SongModel>();
         public MainWindow()
         {
             InitializeComponent();
@@ -31,10 +33,10 @@ namespace plattform
             this.DataContext = new WindowViewModel(this);
             PlayList.Add(new SongModel { songTitle = "Elektronomia - Sky High pt.II [NCS Release].mp3" });
             player.Source = new Uri("D:\\Elektronomia.mp3");
-            
-            player.Volume = 0.1;
-            
 
+            player.Volume = 0.5;
+            
+           
             //new Uri("D:\\Elektronomia.mp3");
             //myFrame.Content = new Login();
 
@@ -78,7 +80,7 @@ namespace plattform
         /// </summary>
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
         {
-            
+
             this.WindowState = WindowState.Minimized;
         }
 
@@ -105,7 +107,8 @@ namespace plattform
 
         private void PlaySong(object sender, RoutedEventArgs e)
         {
-            if(player.CanPause)
+            SongName.Content = PlayList[0].songTitle;
+            if (player.CanPause)
             {
                 player.Pause();
                 PlayIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Play;
@@ -113,10 +116,14 @@ namespace plattform
             else
             {
                 player.Play();
+
                 PlayIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Pause;
             }
-            
-           
+
+
         }
+       
+
+        
     }
 }

@@ -21,11 +21,16 @@ namespace plattform
     /// </summary>
     public partial class MainMenu : Page
     {
+       
         public MainMenu()
         {
             InitializeComponent();
+            
             WindowViewModel.CurrentPage = ApplicationPage.Startseite;
             main.Content = new Startseite();
+            //this.DataContext = new PageViewModel(this);
+            
+
             start.IsSelected = true;
             
         }
@@ -53,6 +58,16 @@ namespace plattform
                     WindowViewModel.CurrentPage = ApplicationPage.Login;
                     ((MainWindow)Application.Current.MainWindow).DataContext = new WindowViewModel(((MainWindow)Application.Current.MainWindow));
                     break;
+                case ApplicationPage.Kategorie:
+
+                    WindowViewModel.CurrentPage = ApplicationPage.Startseite;
+                    main.Content = new Startseite();
+                    break;
+                case ApplicationPage.Library:
+
+                    WindowViewModel.CurrentPage = ApplicationPage.Startseite;
+                    main.Content = new Startseite();
+                    break;
                 case ApplicationPage.Tab:
 
                     WindowViewModel.CurrentPage = ApplicationPage.MainMenu;
@@ -76,13 +91,19 @@ namespace plattform
             else if ((sender as ListViewItem).Name == "kateg")
             {
                 WindowViewModel.CurrentPage = ApplicationPage.Tab;
-                main.Content = new Tab();
+                main.Content = new kategoie();
 
             }
             else if ((sender as ListViewItem).Name == "start")
             {
                 WindowViewModel.CurrentPage = ApplicationPage.Startseite;
                 main.Content = new Startseite();
+
+            }
+            else if ((sender as ListViewItem).Name == "Lib")
+            {
+                WindowViewModel.CurrentPage = ApplicationPage.Library;
+                main.Content = new Library();
 
             }
         }
@@ -153,6 +174,20 @@ namespace plattform
             WindowViewModel.CurrentPage = ApplicationPage.Search;
             
             searchbar.Text = "";
+
+        }
+
+        private void Button_Click_expand(object sender, RoutedEventArgs e)
+        {
+            if (expander.IsExpanded)
+            {
+                expander.IsExpanded = false;
+                profil.Height = 0;
+            }else
+            {
+                expander.IsExpanded = true;
+                profil.Height = 210;
+            }
 
         }
     }

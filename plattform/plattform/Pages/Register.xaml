@@ -20,18 +20,6 @@
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button Style="{StaticResource MaterialDesignFlatButton}"
-                            IsDefault="True"
-                            Margin="0 8 8 0"
-                            Content="Akzeptieren"
-                            
-                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
-                        <Button.CommandParameter>
-                            <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
-                                True
-                            </system:Boolean>
-                        </Button.CommandParameter>
-                    </Button>
-                    <Button Style="{StaticResource MaterialDesignFlatButton}"
                             IsCancel="True"
                             Margin="0 8 8 0"
                             Content="Ablehnen"
@@ -43,6 +31,19 @@
                             </system:Boolean>
                         </Button.CommandParameter>
                     </Button>
+                    <Button Style="{StaticResource MaterialDesignFlatButton}"
+                            IsDefault="True"
+                            Margin="0 8 8 0"
+                            Content="Akzeptieren"
+                            
+                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
+                        <Button.CommandParameter>
+                            <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                True
+                            </system:Boolean>
+                        </Button.CommandParameter>
+                    </Button>
+                    
                 </StackPanel>
             </StackPanel>
         </materialDesign:DialogHost.DialogContent>
@@ -103,8 +104,9 @@
                     Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
                     <!--TODOZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ-->
+                    <!--Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"-->
                     <Border x:Name="borderAGP" Margin="0 30 0 10" BorderBrush="Red" BorderThickness="0" >
-                    <CheckBox  x:Name="check" Padding="10 0 0 0"  Style="{StaticResource MaterialDesignCheckBox}"  Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Tag="True" Content="Ich akzeptiere die AGP">
+                    <CheckBox  x:Name="check" Padding="10 0 0 0"  Style="{StaticResource MaterialDesignCheckBox}"   Tag="True" Content="Ich akzeptiere die AGP">
 
                     </CheckBox>
                         

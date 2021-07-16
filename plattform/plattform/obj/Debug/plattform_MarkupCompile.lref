@@ -1,5 +1,7 @@
 ﻿
 FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\App.xaml;;
+FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\Pages\Library.xaml;;
+FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\Pages\Kategorie.xaml;;
 FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\MainMenu.xaml;;
 FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\Menus\CollapsibleMenu.xaml;;
 FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\Menus\OffCanvasMenu.xaml;;
@@ -9,5 +11,6 @@ FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\MainWindow.
 FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\Menus\Tab.xaml;;
 FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\Pages\Register.xaml;;
 FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\Pages\Startseite.xaml;;
-FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\Search.xaml;;
+FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\Pages\Search.xaml;;
+FC:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\Pages\Songlist.xaml;;
 

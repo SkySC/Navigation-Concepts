@@ -15,6 +15,7 @@ namespace plattform
             mw.MaxWidth = SystemParameters.MaximizedPrimaryScreenWidth;
         }
         public static ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
+        public static ApplicationPage CurrentNistedPage { get; set; } = ApplicationPage.Songlist;
         public static List<string> History { get; set; } = new List<string>();
         public static void AddToHistory(string value)
         {
@@ -25,6 +26,8 @@ namespace plattform
         public Thickness ResizeBorderThickness{get{ return new Thickness(Border); } }
         
         public static string SearchText { get; set; }
+        public static int PlayerCard { get; set; } = 0;
+
     }
 
 }
