@@ -187,9 +187,28 @@ namespace plattform
             {
                 expander.IsExpanded = true;
                 profil.Height = 210;
+                benachrichtigung.Height = 0;
+                tglBenachrichtigung.IsChecked = false;
+                tglBenachrichtigung.Background = Brushes.White;
             }
 
         }
+
+        private void ToggleButton_Checked(object sender, RoutedEventArgs e)
+        {
+            tglBenachrichtigung.Background = Brushes.Gray;
+            benachrichtigung.Height = 350;
+            profil.Height = 0;
+            expander.IsExpanded = false;
+        }
+
+        private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            tglBenachrichtigung.Background = Brushes.White;
+            benachrichtigung.Height = 0;
+        }
+
+       
     }
     
 }

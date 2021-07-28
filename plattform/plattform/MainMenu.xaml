@@ -156,36 +156,26 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
 
                         <Border CornerRadius="25" Width="190" Height="40" Background="LightGray">
-                            <Button BorderBrush="Transparent" Height="50" Background="Transparent" Click="Button_Click_expand">
+                            <Button BorderBrush="Transparent" Height="50" Background="Transparent"  Click="Button_Click_expand">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-15 -10 0 0" VerticalAlignment="Center" Width="280">
                                     <Border CornerRadius="42" Height="40" Width="40" HorizontalAlignment="Left"  Background="CadetBlue">
                                         <Label Content="A" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="22" ></Label>
                                     </Border>
                                     <Label Margin="5 2 0 0" Content="Max Muster" VerticalAlignment="Center" FontSize="17"  />
-                                    <Expander x:Name="expander"  Background="Transparent" Margin="-30 4 0 0"  HorizontalAlignment="Right" Foreground="Black"></Expander>
+                                    <Expander x:Name="expander"  Background="Transparent" Panel.ZIndex="1"  Width="200"  Margin="-150 4 0 0"  HorizontalAlignment="Right" Foreground="Black"></Expander>
                                 </StackPanel>
                             </Button>
 
                         </Border>
 
-                        <ToggleButton  Margin="30 0 30 0" Content="{materialDesign:PackIcon Kind=Bell, Size=25}"
+                        <ToggleButton  x:Name="tglBenachrichtigung"  Margin="50 0 50 0" Content="{materialDesign:PackIcon Kind=Bell, Size=25}"
                                           Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"
                                           ToolTip="Benachrichtigung"  Height="35" Width="35"
-                                          IsChecked="False" VerticalAlignment="Center" Foreground="Black"  HorizontalAlignment="Right"  >
+                                          IsChecked="False" VerticalAlignment="Center" Foreground="Black"  HorizontalAlignment="Right" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Unchecked" >
 
 
                         </ToggleButton>
-                        <materialDesign:PopupBox DockPanel.Dock="Right" 
-                                                 PlacementMode="BottomAndAlignRightEdges"
-                                                 HorizontalAlignment="Right"
-                                                 Foreground="Black"
-                                                 >
-                            <ListBox >
-                                <ListBoxItem Content="Hello World" />
-                                <ListBoxItem Content="Nice Popup" />
-                                <ListBoxItem Content="Goodbye" />
-                            </ListBox>
-                        </materialDesign:PopupBox>
+                        
 
                     </StackPanel>
                 </Grid>
@@ -208,24 +198,22 @@
                     </StackPanel>
                 </Border>
             </materialDesign:Card>
-            <!--<materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth1" x:Name="benachrichtigung" Panel.ZIndex="10" Grid.Row="1" VerticalAlignment="Top"  Background="White" Height="200" Width="250" HorizontalAlignment="Right"  >
+            <materialDesign:Card Margin="0 0 20 0" materialDesign:ShadowAssist.ShadowDepth="Depth1" x:Name="benachrichtigung"   Grid.Row="1" VerticalAlignment="Top"  Background="White" Height="0" Width="300" HorizontalAlignment="Right"  >
                 <Border BorderBrush="Gray" BorderThickness="0.1">
                     <StackPanel Orientation="Vertical">
-                        <Button Width="200" Background="Transparent" BorderBrush="Transparent" Foreground="Gray" Height="50" >
-                            <Label Content="Profil"  Margin="-80 0 0 0"  FontSize="15" FontWeight="Light"></Label>
-                        </Button>
-                        <Button Width="200" Background="Transparent" BorderBrush="Transparent" Foreground="Gray" Height="50"   >
-                            <Label Content="Konto" HorizontalAlignment="Left" Margin="-80 0 0 0" FontSize="15" FontWeight="Light"></Label>
-                        </Button>
-                        <Button Width="200" Background="Transparent" BorderBrush="Transparent" Foreground="Gray" Height="50"   >
-                            <Label Content="auf Premium upgraden" HorizontalAlignment="Left" Margin="-7 0 0 0" FontSize="15" FontWeight="Light"></Label>
-                        </Button>
-                        <Button Width="200" Background="Transparent" BorderBrush="Transparent" Foreground="Gray" Height="50"  >
-                            <Label Content="Einstellungen" HorizontalAlignment="Left" Margin="-70 0 0 0" FontSize="15" FontWeight="Light"></Label>
-                        </Button>
+                        <TextBlock FontSize="20" Margin="20 20 20 0">Max</TextBlock>
+                        <TextBlock Margin="20" TextWrapping="Wrap" Foreground="Gray" FontSize="15">Ein neues Album wurde veröffentlicht</TextBlock>
+                        
+                        <Separator ></Separator>
+                        <TextBlock FontSize="20" Margin="20 20 20 0">Alice</TextBlock>
+                        <TextBlock Margin="20" TextWrapping="Wrap" Foreground="Gray" FontSize="15">Jetzt im Trends</TextBlock>
+                        <Separator ></Separator>
+                        <TextBlock FontSize="20" Margin="20 20 20 0">Bob</TextBlock>
+                        <TextBlock Margin="20" TextWrapping="Wrap" Foreground="Gray" FontSize="15">Hören Sie die neue Musik</TextBlock>
+                       
                     </StackPanel>
                 </Border>
-            </materialDesign:Card>-->
+            </materialDesign:Card>
 
 
             <Frame x:Name="main" Grid.Row="1" Panel.ZIndex="-1" NavigationUIVisibility="Hidden" ></Frame>
