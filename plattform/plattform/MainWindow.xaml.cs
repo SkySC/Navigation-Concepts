@@ -1,21 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using plattform.DataModels;
+
+
 
 namespace plattform
 {
@@ -25,20 +11,13 @@ namespace plattform
     public partial class MainWindow : Window
     {
        
-        private List<SongModel> PlayList = new List<SongModel>();
+        
         public MainWindow()
         {
             InitializeComponent();
 
             this.DataContext = new WindowViewModel(this);
-            PlayList.Add(new SongModel { songTitle = "Elektronomia - Sky High pt.II [NCS Release].mp3" });
-            player.Source = new Uri("D:\\Elektronomia.mp3");
-
-            player.Volume = 0.5;
-            
            
-            //new Uri("D:\\Elektronomia.mp3");
-            //myFrame.Content = new Login();
 
         }
 
@@ -105,23 +84,7 @@ namespace plattform
 
         }
 
-        private void PlaySong(object sender, RoutedEventArgs e)
-        {
-            SongName.Content = PlayList[0].songTitle;
-            if (player.CanPause)
-            {
-                player.Pause();
-                PlayIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Play;
-            }
-            else
-            {
-                player.Play();
-
-                PlayIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Pause;
-            }
-
-
-        }
+        
        
 
         

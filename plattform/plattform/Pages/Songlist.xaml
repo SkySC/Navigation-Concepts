@@ -6,26 +6,119 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:plattform"
       mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="900"
+      d:DesignHeight="600" d:DesignWidth="1100"
       Title="Songlist">
 
-    <Grid Background="White">
-        
-        <StackPanel Orientation="Vertical">
-            <Grid Height="300" Width="900" Background="#033D62" >
-                <Grid Height="150" Width="150" Background="Aqua" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50 0 0 0"></Grid>
-            </Grid>
-            <Grid Height="50" Width="900" Background="White" >
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="#" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="110 10 0 0" />
-                    <Label Content="Title" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="50 10 0 0" />
-                    <Label Content="Album" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="190 10 0 0"/>
-                    <Label Content="Künstler" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="100 10 0 0"/>
-                    <materialDesign:PackIcon Kind="ClockOutline" Foreground="Gray" Margin="150 20 0 0"/>
-                </StackPanel>
-                <Separator Width="700" VerticalAlignment="Bottom"></Separator>
-            </Grid>
-            <Grid Width="800" Height="50"></Grid>
-        </StackPanel>
+    <Grid Background="#FFFFFF" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 0 0 0">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical">
+                
+                <Label Content="Songs" FontSize="25" Foreground="Gray" Margin="30 20 0 0" />
+                <Grid Height="50" Width="1000" Background="White" HorizontalAlignment="Left" Margin="0 30 0 0">
+                    <StackPanel Orientation="Horizontal" >
+                        <Label Content="#" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="30 10 0 0" />
+                        <Label Content="Title" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="70 10 0 0" />
+                        <Label Content="Album" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="200 10 0 0"/>
+                        <Label Content="Künstler" FontSize="15" Foreground="Gray" FontWeight="Light" Margin="150 10 0 0"/>
+                        <materialDesign:PackIcon Kind="ClockOutline" Foreground="Gray" Margin="150 20 0 0"/>
+                    </StackPanel>
+                    <Separator Width="900" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Separator>
+
+                </Grid>
+                <Grid Width="900" Height="50" HorizontalAlignment="Left" >
+                    <Button Height="40" Background="LightGray" BorderBrush="Transparent" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"  Height="27">
+                            <Label Content="1"  FontSize="17" FontWeight="Light"  Width="80" Padding="20 0 0 0"/>
+                            <Label Content="Song1"  FontSize="17" FontWeight="Light" Margin="10 0 0 0" Width="120" Padding="16 0 0 0"/>
+                            <Label Content="Album1" Margin="110 0 0 0" FontSize="17" FontWeight="Light" Width="130" Padding="17 0 0 0"/>
+                            <Label Content="Künstler1" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="100" Padding="17 0 0 0"/>
+                            <Label Content="3:30" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="200" Padding="45 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <Grid Width="900" Height="50" HorizontalAlignment="Left">
+                    <Button Height="40" Background="LightGray" BorderBrush="Transparent" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"  Height="27">
+                            <Label Content="2"  FontSize="17" FontWeight="Light"  Width="80" Padding="20 0 0 0"/>
+                            <Label Content="Song2"  FontSize="17" FontWeight="Light" Margin="10 0 0 0" Width="120" Padding="16 0 0 0"/>
+                            <Label Content="Album1" Margin="110 0 0 0" FontSize="17" FontWeight="Light" Width="130" Padding="17 0 0 0"/>
+                            <Label Content="Künstler1" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="100" Padding="17 0 0 0"/>
+                            <Label Content="2:41" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="200" Padding="45 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <Grid Width="900" Height="50" HorizontalAlignment="Left" >
+                    <Button Height="40" Background="LightGray" BorderBrush="Transparent" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"  Height="27">
+                            <Label Content="3"  FontSize="17" FontWeight="Light"  Width="80" Padding="20 0 0 0"/>
+                            <Label Content="Song3"  FontSize="17" FontWeight="Light" Margin="10 0 0 0" Width="120" Padding="16 0 0 0"/>
+                            <Label Content="Album1" Margin="110 0 0 0" FontSize="17" FontWeight="Light" Width="130" Padding="17 0 0 0"/>
+                            <Label Content="Künstler1" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="100" Padding="17 0 0 0"/>
+                            <Label Content="3:20" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="200" Padding="45 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <Grid Width="900" Height="50" HorizontalAlignment="Left" >
+                    <Button Height="40" Background="LightGray" BorderBrush="Transparent" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"  Height="27">
+                            <Label Content="4"  FontSize="17" FontWeight="Light"  Width="80" Padding="20 0 0 0"/>
+                            <Label Content="Song4"  FontSize="17" FontWeight="Light" Margin="10 0 0 0" Width="120" Padding="16 0 0 0"/>
+                            <Label Content="Album1" Margin="110 0 0 0" FontSize="17" FontWeight="Light" Width="130" Padding="17 0 0 0"/>
+                            <Label Content="Künstler1" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="100" Padding="17 0 0 0"/>
+                            <Label Content="4:01" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="200" Padding="45 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <Grid Width="900" Height="50" HorizontalAlignment="Left" >
+                    <Button Height="40" Background="LightGray" BorderBrush="Transparent" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"  Height="27">
+                            <Label Content="5"  FontSize="17" FontWeight="Light"  Width="80" Padding="20 0 0 0"/>
+                            <Label Content="Song5"  FontSize="17" FontWeight="Light" Margin="10 0 0 0" Width="120" Padding="16 0 0 0"/>
+                            <Label Content="Album1" Margin="110 0 0 0" FontSize="17" FontWeight="Light" Width="130" Padding="17 0 0 0"/>
+                            <Label Content="Künstler1" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="100" Padding="17 0 0 0"/>
+                            <Label Content="4:27" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="200" Padding="45 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <Grid Width="900" Height="50" HorizontalAlignment="Left" >
+                    <Button Height="40" Background="LightGray" BorderBrush="Transparent" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"  Height="27">
+                            <Label Content="6"  FontSize="17" FontWeight="Light"  Width="80" Padding="20 0 0 0"/>
+                            <Label Content="Song6"  FontSize="17" FontWeight="Light" Margin="10 0 0 0" Width="120" Padding="16 0 0 0"/>
+                            <Label Content="Album1" Margin="110 0 0 0" FontSize="17" FontWeight="Light" Width="130" Padding="17 0 0 0"/>
+                            <Label Content="Künstler1" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="100" Padding="17 0 0 0"/>
+                            <Label Content="3:36" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="200" Padding="45 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <Grid Width="900" Height="50" HorizontalAlignment="Left" >
+                    <Button Height="40" Background="LightGray" BorderBrush="Transparent" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"  Height="27">
+                            <Label Content="7"  FontSize="17" FontWeight="Light"  Width="80" Padding="20 0 0 0"/>
+                            <Label Content="Song7"  FontSize="17" FontWeight="Light" Margin="10 0 0 0" Width="120" Padding="16 0 0 0"/>
+                            <Label Content="Album1" Margin="110 0 0 0" FontSize="17" FontWeight="Light" Width="130" Padding="17 0 0 0"/>
+                            <Label Content="Künstler1" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="100" Padding="17 0 0 0"/>
+                            <Label Content="3:31" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="200" Padding="45 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <Grid Width="900" Height="50" HorizontalAlignment="Left" >
+                    <Button Height="40" Background="LightGray" BorderBrush="Transparent" >
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"  Height="27">
+                            <Label Content="8"  FontSize="17" FontWeight="Light"  Width="80" Padding="20 0 0 0"/>
+                            <Label Content="Song8"  FontSize="17" FontWeight="Light" Margin="10 0 0 0" Width="120" Padding="16 0 0 0"/>
+                            <Label Content="Album1" Margin="110 0 0 0" FontSize="17" FontWeight="Light" Width="130" Padding="17 0 0 0"/>
+                            <Label Content="Künstler1" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="100" Padding="17 0 0 0"/>
+                            <Label Content="2:01" Margin="70 0 0 0" FontSize="17" FontWeight="Light" Width="200" Padding="45 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+
+
+
+            </StackPanel>
+
+        </ScrollViewer>
     </Grid>
 </Page>

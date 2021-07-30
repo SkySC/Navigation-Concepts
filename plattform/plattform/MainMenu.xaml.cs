@@ -34,6 +34,11 @@ namespace plattform
             start.IsSelected = true;
             
         }
+        /// <summary>
+        /// Scroller
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             ScrollViewer scv = (ScrollViewer)sender;
@@ -41,6 +46,11 @@ namespace plattform
             e.Handled = true;
         }
 
+        /// <summary>
+        /// RückwärtsNavigation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Back(object sender, RoutedEventArgs e)
         {
             
@@ -63,6 +73,11 @@ namespace plattform
                     WindowViewModel.CurrentPage = ApplicationPage.Startseite;
                     main.Content = new Startseite();
                     break;
+                case ApplicationPage.Songlist:
+
+                    WindowViewModel.CurrentPage = ApplicationPage.Kategorie;
+                    main.Content = new kategoie();
+                    break;
                 case ApplicationPage.Library:
 
                     WindowViewModel.CurrentPage = ApplicationPage.Startseite;
@@ -70,8 +85,8 @@ namespace plattform
                     break;
                 case ApplicationPage.Tab:
 
-                    WindowViewModel.CurrentPage = ApplicationPage.MainMenu;
-                    ((MainWindow)Application.Current.MainWindow).DataContext = new WindowViewModel(((MainWindow)Application.Current.MainWindow));
+                    WindowViewModel.CurrentPage = ApplicationPage.Startseite;
+                    main.Content = new Startseite();
                     break;
                 default:
 
@@ -79,6 +94,12 @@ namespace plattform
 
             }
         }
+
+        /// <summary>
+        /// Menu Navigation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
@@ -106,8 +127,19 @@ namespace plattform
                 main.Content = new Library();
 
             }
+            else if ((sender as ListViewItem).Name == "Einst")
+            {
+                WindowViewModel.CurrentPage = ApplicationPage.Tab;
+                main.Content = new Tab();
+
+            }
         }
 
+        /// <summary>
+        /// Effekte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ListViewItem_Unselected(object sender, RoutedEventArgs e)
         {
             (sender as ListViewItem).Foreground = Brushes.Black;
@@ -115,7 +147,11 @@ namespace plattform
         }
 
 
-
+        /// <summary>
+        /// MouseLeave Effekte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void start_MouseLeave(object sender, MouseEventArgs e)
         {
             if (sender.GetType() == typeof(ListViewItem))
@@ -137,6 +173,11 @@ namespace plattform
             }
         }
 
+        /// <summary>
+        /// Mouseover Effekte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void start_MouseEnter(object sender, MouseEventArgs e)
         {
             if (sender.GetType() == typeof(ListViewItem))
@@ -157,14 +198,22 @@ namespace plattform
             }
             
         }
-
+        /// <summary>
+        /// Forward Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Forward(object sender, RoutedEventArgs e)
         {
             
         }
 
        
-
+        /// <summary>
+        /// SucheBar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void searchbar_KeyUp_1(object sender, KeyEventArgs e)
         {
             if (e.Key != System.Windows.Input.Key.Enter) return;
@@ -176,7 +225,11 @@ namespace plattform
             searchbar.Text = "";
 
         }
-
+        /// <summary>
+        /// Dropdown Menu Profile
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_expand(object sender, RoutedEventArgs e)
         {
             if (expander.IsExpanded)
@@ -194,6 +247,11 @@ namespace plattform
 
         }
 
+        /// <summary>
+        /// Dropdown Menu Benachrichtigung
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
             tglBenachrichtigung.Background = Brushes.Gray;

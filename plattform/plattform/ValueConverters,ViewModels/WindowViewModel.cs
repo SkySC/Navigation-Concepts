@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using System.Windows;
 
+
+
+
+/// <summary>
+/// Windowviewmodel für MainWindow
+/// </summary>
 namespace plattform
 {
     public class WindowViewModel

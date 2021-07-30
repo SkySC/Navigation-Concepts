@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
 
+/// <summary>
+/// Funktion zur Steuerung von XAML-Zusammenhängen in Code
+/// </summary>
 public static class Ext
     {
-        public static T GetChildOfType<T>(this DependencyObject depObj)
+        public static T GetChildOfType<T>(this DependencyObject obj)
     where T : DependencyObject
         {
-            if (depObj == null) return null;
+            if (obj == null) return null;
 
-            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
             {
-                var child = VisualTreeHelper.GetChild(depObj, i);
+                var child = VisualTreeHelper.GetChild(obj, i);
 
                 var result = (child as T) ?? GetChildOfType<T>(child);
                 if (result != null) return result;

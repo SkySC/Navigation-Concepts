@@ -1,5 +1,7 @@
 ﻿
-
+/// <summary>
+/// Enum definiert aktuelle Seite
+/// </summary>
 namespace plattform
 {
     public enum ApplicationPage
@@ -16,6 +18,7 @@ namespace plattform
         Kategorie = 9,
         Library = 10,
         Songlist = 11,
+        
 
         
     }

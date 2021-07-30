@@ -41,6 +41,7 @@ namespace plattform
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            WindowViewModel.CurrentPage = ApplicationPage.Songlist;
             this.NavigationService.Navigate(new Songlist());
 
         }

@@ -4,6 +4,11 @@ using System;
 using System.Diagnostics;
 using System.Globalization;
 
+
+
+/// <summary>
+/// Value Converter konvertiert den Inhalt der Seite im Frame
+/// </summary>
 namespace plattform
 {
     class ApplicationPageValueConverter : BaseValueConverter<ApplicationPageValueConverter>

@@ -78,8 +78,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataModels\ApplicationNistedPage.cs" />
-    <Compile Include="DataModels\SongModel.cs" />
     <Compile Include="ext.cs" />
     <Compile Include="Pages\Library.xaml.cs">
       <DependentUpon>Library.xaml</DependentUpon>
@@ -94,7 +92,7 @@
       <DependentUpon>CollapsibleMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataModels\ApplicationPage.cs" />
-    <Compile Include="Menus\Tab.xaml.cs">
+    <Compile Include="Pages\Tab.xaml.cs">
       <DependentUpon>Tab.xaml</DependentUpon>
     </Compile>
     <Compile Include="Menus\OffCanvasMenu.xaml.cs">
@@ -114,8 +112,6 @@
     </Compile>
     <Compile Include="ValueConverters,ViewModels\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters,ViewModels\BaseValueConverter.cs" />
-    <Compile Include="ValueConverters,ViewModels\CurrentNistedPageValueConverter.cs" />
-    <Compile Include="ValueConverters,ViewModels\PageViewModel.cs" />
     <Compile Include="ValueConverters,ViewModels\WindowViewModel.cs" />
     <Page Include="Pages\Library.xaml">
       <SubType>Designer</SubType>
@@ -163,7 +159,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Menus\Tab.xaml">
+    <Page Include="Pages\Tab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

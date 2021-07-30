@@ -22,127 +22,127 @@
                     </Border>
 
                     <Border Background="DeepSkyBlue"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Pop" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="Purple"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Hip Hop" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkViolet"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Concerts" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
 
 
                     <Border Background="OliveDrab"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Stimmung" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkBlue"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Blues" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
 
                     <Border Background="DarkCyan"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Klassik" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
 
                     <Border Background="DarkGreen"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Jazz" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkKhaki"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Soul" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkMagenta"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="RnB" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkOrange"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Zu Hause" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkRed"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Metal" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkSalmon"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click" BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Punk" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkSlateBlue"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click" BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Instrumental" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkSlateGray"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Für-Studenten" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkTurquoise"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click" BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Romantik" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkSlateBlue"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click" BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Reise" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DarkViolet"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click" BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Im Auto" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="Gold"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click" BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Trends" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
 
                     <Border Background="DeepPink"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click" BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Arabisch" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="Firebrick"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click" BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Türkisch" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="LightCoral"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click" BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Fitness" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="DimGray"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Chillout" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="Gray"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click" BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Gaming" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
                     <Border Background="Black"  CornerRadius="20" Height="200" Width="200"  Margin="20" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
-                        <Button Background="Transparent"  BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" Click="Button_Click" BorderBrush="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label Content="Entdecken" Background="Transparent" FontSize="25" FontWeight="Light" Foreground="White"></Label>
                         </Button>
                     </Border>
