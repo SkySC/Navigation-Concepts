@@ -12,7 +12,6 @@ import SignIn from './pages/SignIn'
 
 import { GlobalStyle } from './globalStyles'
 import { useState } from 'react'
-import styled from 'styled-components'
 
 const App = () => {
 	const [canvasVisible, setCanvasVisible] = useState(false)
