@@ -79,6 +79,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ext.cs" />
+    <Compile Include="Pages\Help.xaml.cs">
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Library.xaml.cs">
       <DependentUpon>Library.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
     <Compile Include="ValueConverters,ViewModels\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters,ViewModels\BaseValueConverter.cs" />
     <Compile Include="ValueConverters,ViewModels\WindowViewModel.cs" />
+    <Page Include="Pages\Help.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Library.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

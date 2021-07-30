@@ -81,6 +81,11 @@ namespace plattform
                     WindowViewModel.CurrentPage = ApplicationPage.Startseite;
                     main.Content = new Startseite();
                     break;
+                case ApplicationPage.Help:
+
+                    WindowViewModel.CurrentPage = ApplicationPage.Startseite;
+                    main.Content = new Startseite();
+                    break;
                 case ApplicationPage.Tab:
 
                     WindowViewModel.CurrentPage = ApplicationPage.Startseite;
@@ -130,6 +135,12 @@ namespace plattform
             {
                 WindowViewModel.CurrentPage = ApplicationPage.Tab;
                 main.Content = new Tab();
+
+            }
+            else if ((sender as ListViewItem).Name == "help")
+            {
+                WindowViewModel.CurrentPage = ApplicationPage.Help;
+                main.Content = new Help();
 
             }
         }

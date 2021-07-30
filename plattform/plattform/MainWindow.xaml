@@ -51,7 +51,7 @@
                 <materialDesign:PackIcon Kind="WindowMinimize" />
             </Button>
 
-            <TextBlock HorizontalAlignment="Center" Foreground="White" VerticalAlignment="Center">Application Name</TextBlock>
+                <TextBlock HorizontalAlignment="Center" Foreground="White" VerticalAlignment="Center">Plattform</TextBlock>
         </DockPanel>
         
             

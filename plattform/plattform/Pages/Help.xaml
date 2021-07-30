@@ -1,0 +1,24 @@
+﻿<Page x:Class="plattform.Help"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:plattform"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Help">
+
+   
+    <Grid Background="White">
+        <Label Content="Hilfe" FontSize="30" FontWeight="DemiBold" Margin="30 30 0 0"/>
+        <TextBlock FontSize="20"  Margin="35 90 30 0" Foreground="Gray" TextWrapping="Wrap">Das Projekt Plattform ist eine Musik-App UI. Es besteht aus einem Anmelden, Registrieren-Seite und Hauptseite. In der Anmelden Seite kann man E-Mail und Password 
+               eingeben. Es gibt auch die Möglichkeit beim Password-vergessen das Password zurückzusetzen.
+               In der Registrieren Seite kann man Namen, E-Mail, Password, Geburtsdatum eingeben. Die Hauptseite
+               besteht aus einem Navigationsleiste, Suche Bar, Profiletaste, Benachrichtigungstaste und Inhalt der
+               Seite. Man kann zwischen verschiedene Seiten navigieren. In der Startseite kann man Albums sehen. 
+               In den Kategorien kann man beim Klicken auf einer Kategorie zu der Songs-liste kommen und entsprechend 
+               zurücknavigieren. Man kann im Suche-Bar etwas eingeben und zu einem Suchergebnis kommen. Die Profiletaste und
+               Benachrichtigung öffnen mit ein Dropdown Menü.</TextBlock>
+    </Grid>
+</Page>

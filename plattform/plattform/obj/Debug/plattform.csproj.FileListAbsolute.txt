@@ -46,3 +46,5 @@ C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Pa
 C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Pages\Songlist.baml
 C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Pages\Tab.g.cs
 C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Pages\Tab.baml
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Pages\Help.g.cs
+C:\Users\omarm\source\repos\Navigation-Concepts\plattform\plattform\obj\Debug\Pages\Help.baml

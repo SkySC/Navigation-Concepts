@@ -9,11 +9,11 @@
       d:DesignHeight="800" d:DesignWidth="1300"
       Title="Startseite">
     <ScrollViewer>
-        <Grid Background="#FFFFFF">
-
+        <Grid Background="#FFFFFF" >
+            
             <Grid HorizontalAlignment="Center" Margin="20 0 20 0"  >
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
-
+                    <Label Content="Startseite" FontSize="30" FontWeight="DemiBold" Margin="18 30 0 0"/>
                     <Label Content="Für Sie" FontSize="25" FontWeight="Light" Width="800" Margin="20 20 0 10" HorizontalAlignment="Left"/>
 
                     <WrapPanel Orientation="Horizontal">
@@ -470,7 +470,7 @@
 
                     </WrapPanel>
 
-                    <Label Content="Alles für deinen Party-Sommer" FontSize="25" FontWeight="Light" Width="800" Margin="20 20 0 10" HorizontalAlignment="Left"/>
+                    <Label Content="Alles für deine Party" FontSize="25" FontWeight="Light" Width="800" Margin="20 20 0 10" HorizontalAlignment="Left"/>
 
                     <WrapPanel Orientation="Horizontal">
                         <materialDesign:Card Width="220" Margin="20">

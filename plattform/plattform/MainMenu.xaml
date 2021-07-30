@@ -17,7 +17,7 @@
         <materialDesign:DialogHost.DialogContent>
             <StackPanel Margin="20">
                 <Label FontSize="25" FontWeight="Heavy" Content="Abmelden"  ></Label>
-                <Label FontSize="20" Margin="0 10 0 30" Content="Wollen Sie sicher abmelden?" Foreground="Gray"></Label>
+                <Label FontSize="20" Margin="0 10 0 30" Content="Wollen Sie wirklich abmelden?" Foreground="Gray"></Label>
                 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button Style="{StaticResource MaterialDesignFlatButton}"
@@ -126,7 +126,7 @@
 
                             </ListViewItem>
 
-                            <ListViewItem MouseLeave="start_MouseLeave" MouseEnter="start_MouseEnter"  Selected="ListViewItem_Selected" Unselected="ListViewItem_Unselected" >
+                            <ListViewItem x:Name="help" MouseLeave="start_MouseLeave" MouseEnter="start_MouseEnter"  Selected="ListViewItem_Selected" Unselected="ListViewItem_Unselected" >
                                 <StackPanel Orientation="Horizontal">
                                     <materialDesign:PackIcon Margin="10 0 0 0" Kind="Help" Height="30" Width="30" />
                                     <Label Content="Hilfe" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>

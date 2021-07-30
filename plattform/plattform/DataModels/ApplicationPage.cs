@@ -18,6 +18,7 @@ namespace plattform
         Kategorie = 9,
         Library = 10,
         Songlist = 11,
+        Help = 12,
         
 
         
