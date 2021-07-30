@@ -28,9 +28,7 @@ namespace plattform
             
             WindowViewModel.CurrentPage = ApplicationPage.Startseite;
             main.Content = new Startseite();
-            //this.DataContext = new PageViewModel(this);
             
-
             start.IsSelected = true;
             
         }
@@ -106,8 +104,9 @@ namespace plattform
            
             if ((sender as ListViewItem).Name == "Abmelden")
             {
-                WindowViewModel.CurrentPage = ApplicationPage.Login;
-                ((MainWindow)Application.Current.MainWindow).DataContext = new WindowViewModel(((MainWindow)Application.Current.MainWindow));
+                // Wenn Abmelden, öffne Dialog, schließe Player
+                WindowViewModel.PlayerCard = 0;
+                Dialog.IsOpen = true;
             }
             else if ((sender as ListViewItem).Name == "kateg")
             {
@@ -266,7 +265,27 @@ namespace plattform
             benachrichtigung.Height = 0;
         }
 
-       
+        private void AbmeldenBtn(object sender, RoutedEventArgs e)
+        {
+            WindowViewModel.CurrentPage = ApplicationPage.Login;
+            ((MainWindow)Application.Current.MainWindow).DataContext = new WindowViewModel(((MainWindow)Application.Current.MainWindow));
+        }
+        private void DialogHost_DialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
+        {
+
+        }
+
+        /// <summary>
+        /// Dialog Abbrechen-Taste
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DialogAbbrechen(object sender, RoutedEventArgs e)
+        {
+            Abmelden.IsSelected = false;
+            WindowViewModel.PlayerCard = 70;
+           
+        }
     }
     
 }

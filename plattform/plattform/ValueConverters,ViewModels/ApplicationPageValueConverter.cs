@@ -22,8 +22,7 @@ namespace plattform
                     return new Login();
                 case ApplicationPage.Tab:
                     return new Tab();
-                case ApplicationPage.Songlist:
-                    return new Songlist();
+                
                 case ApplicationPage.Register:
                     WindowViewModel.PlayerCard = 0;
                     return new Register();

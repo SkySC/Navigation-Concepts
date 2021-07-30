@@ -1,5 +1,6 @@
 ﻿
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Windows;
 
 
@@ -32,8 +33,11 @@ namespace plattform
         public Thickness ResizeBorderThickness{get{ return new Thickness(Border); } }
         
         public static string SearchText { get; set; }
+
+
         public static int PlayerCard { get; set; } = 0;
 
+       
     }
 
 }

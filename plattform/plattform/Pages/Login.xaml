@@ -12,6 +12,7 @@
     <materialDesign:DialogHost DialogClosing="DialogHost_DialogClosing" 
                                Style="{StaticResource MaterialDesignEmbeddedDialogHost}"
                                DialogMargin="8">
+        <!--Dialog-->
         <materialDesign:DialogHost.DialogContent>
             <StackPanel Margin="16">
                 <Label Content="Bitte, Geben Sie Ihre E-Mail ein" ></Label>
@@ -65,7 +66,7 @@
                 
             </Grid>
             
-            <!--Rest Anmelden-->
+            <!--Anmelden-->
             <Grid Grid.Row="1">
         
         <Border Height="Auto" Width="400" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="45" Background="White"  >
@@ -99,16 +100,14 @@
 
 
 
-                    <!--Login-->
-                <Grid
-                    Width="250" Margin="0 30">
-                    <Button
-                         Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                         Height="40"
-                         materialDesign:ButtonAssist.CornerRadius="20"
-                         ToolTip="Login" Click="login">
-                        <TextBlock
-                         Text="Anmelden" />
+                   
+                <Grid Width="250" Margin="0 30">
+                     <!--Anmeldentaste-->
+                     <Button Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                             Height="40"
+                             materialDesign:ButtonAssist.CornerRadius="20"
+                             ToolTip="Login" Click="login">
+                        <TextBlock Text="Anmelden" />
                         
                     </Button>
                     

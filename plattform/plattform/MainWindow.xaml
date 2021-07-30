@@ -21,6 +21,7 @@
         AllowsTransparency="True"
         >
 
+    <!--Definition vom Window-->
     <WindowChrome.WindowChrome>
         <WindowChrome
             ResizeBorderThickness="{Binding ResizeBorderThickness}"
@@ -29,8 +30,10 @@
             
         </WindowChrome>
     </WindowChrome.WindowChrome>
+    <!--Seitenteilung-->
     <Border BorderBrush="Gray" BorderThickness="1" x:Name="OuterBorder" Margin="6">
     <DockPanel x:Name="RootWindow"  >
+        <!--TilleBar-->
         <DockPanel x:Name="TitleBar" MouseDown="TitleBar_MouseDown" DockPanel.Dock="Top" Background="#023E63" Height="35">
             <Button  x:Name="CloseButton" Foreground="White" Background="Transparent" BorderBrush="Transparent" 
                     Click="CloseButton_Click"                 
@@ -52,15 +55,17 @@
         </DockPanel>
         
             
-      
+        <!--Inhalt der Seite-->
         <Grid DockPanel.Dock="Bottom" >
 
             <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
+            <!--Inhalt Frame-->
             <Frame Panel.ZIndex="-1" BorderBrush="Transparent" x:Name="myFrame" Grid.Row="0"  NavigationUIVisibility="Hidden" 
                    Content="{Binding CurrentPage , Converter={local:ApplicationPageValueConverter}}" ></Frame>
+            <!--Player-->
             <materialDesign:Card x:Name="PlayerCard"  Grid.Row="1" Height="{Binding PlayerCard}" materialDesign:ShadowAssist.ShadowDepth="Depth1" >
 
                     <Grid>
