@@ -100,14 +100,15 @@
                 </StackPanel>
             </ScrollViewer>
         </materialDesign:Card>
+        <!--Inhalt der Seite-->
         <Grid Grid.Column="1" Background="WhiteSmoke">
             <Label FontSize="25" Margin="20">Top-Left Navigation</Label>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                <Button Margin="20" Click="Button_Click">Hamburger Menü</Button>
-                <Button Margin="20" Click="Button_Click_1">Collapsible Menü</Button>
-                <Button Margin="20" Click="Button_Click_2">Off-Canvas Menü</Button>
-                <Button Margin="20" Click="Button_Click_3">Tabs</Button>
+                <Button Margin="20" Click="Button_Click">Hamburger Navigation</Button>
+                <Button Margin="20" Click="Button_Click_1">Collapsible Navigation</Button>
+                <Button Margin="20" Click="Button_Click_2">Off-Canvas Navigation</Button>
+                <Button Margin="20" Click="Button_Click_3">Tabs Navigation</Button>
 
 
             </StackPanel>

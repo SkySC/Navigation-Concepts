@@ -24,11 +24,15 @@ namespace Komponente
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Toggle Tasten 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tgl2_Checked(object sender, RoutedEventArgs e)
         {
             tgl1.IsChecked = true;
         }
-
         private void tgl1_Checked(object sender, RoutedEventArgs e)
         {
             tgl2.IsChecked = true;
@@ -42,16 +46,22 @@ namespace Komponente
             tgl2.IsChecked = false;
         }
 
+        /// <summary>
+        /// ListViewItem ausgewählt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void back_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
-
+        /// <summary>
+        /// NavigationsTasten
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new TopLeftNavi());

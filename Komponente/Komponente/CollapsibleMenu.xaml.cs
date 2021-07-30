@@ -24,11 +24,15 @@ namespace Komponente
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Toggletasten
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tgl2_Checked(object sender, RoutedEventArgs e)
         {
             tgl1.IsChecked = true;
         }
-
         private void tgl1_Checked(object sender, RoutedEventArgs e)
         {
             tgl2.IsChecked = true;
@@ -42,6 +46,11 @@ namespace Komponente
             tgl2.IsChecked = false;
         }
 
+        /// <summary>
+        /// scroll
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             ScrollViewer scv = (ScrollViewer)sender;
@@ -49,6 +58,11 @@ namespace Komponente
             e.Handled = true;
         }
 
+        /// <summary>
+        /// NavigationsTasten
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HamburgerMenu());

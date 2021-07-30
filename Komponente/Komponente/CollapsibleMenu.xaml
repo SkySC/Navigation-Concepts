@@ -10,7 +10,7 @@
       Title="CollapsibleMenu">
 
     <Grid>
-
+        <!--Menüleiste-->
         <Grid x:Name="nav_pnl"  HorizontalAlignment="Left" Width="0" 
                Background ="White" 
                ZIndex ="2">
@@ -117,16 +117,16 @@
             </ScrollViewer>
         </Grid>
         <Grid>
+            <!--Seitenteilung-->
             <Grid.RowDefinitions>
                 <RowDefinition Height="70">
 
                 </RowDefinition>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <materialDesign:ColorZone
-            Mode="PrimaryMid"
-            Padding="16" Grid.Row="0">
-                <DockPanel>
+            <!--Top Bar-->
+            <materialDesign:ColorZone Mode="PrimaryMid" Padding="16" Grid.Row="0">
+               <DockPanel>
                     <ToggleButton
                       Style="{DynamicResource MaterialDesignSwitchAccentToggleButton}"
                       VerticalAlignment="Center"
@@ -216,13 +216,15 @@
                     </StackPanel>
                 </DockPanel>
             </materialDesign:ColorZone>
-
+            
+            <!--Inhalt der Seite-->
             <Grid Grid.Row="1" Background="WhiteSmoke">
+                <Label FontSize="25" Margin="20">Collapsible Navigation</Label>
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                    <Button Margin="20" Click="Button_Click">Hamburger Menü</Button>
-                    <Button Margin="20" Click="Button_Click_1">Tab</Button>
-                    <Button Margin="20" Click="Button_Click_2">Off-Canvas Menü</Button>
+                    <Button Margin="20" Click="Button_Click">Hamburger Navigation</Button>
+                    <Button Margin="20" Click="Button_Click_1">Tab Navigation</Button>
+                    <Button Margin="20" Click="Button_Click_2">Off-Canvas Navigation</Button>
                     <Button Margin="20" Click="Button_Click_3">Top-Left Navigation</Button>
 
 

@@ -24,16 +24,27 @@ namespace Komponente
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// scroll
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             ScrollViewer scv = (ScrollViewer)sender;
             scv.ScrollToHorizontalOffset(scv.HorizontalOffset - e.Delta);
             e.Handled = true;
         }
+
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
         }
 
+        /// <summary>
+        /// NavigationsTasten
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HamburgerMenu());

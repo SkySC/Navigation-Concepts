@@ -10,12 +10,13 @@
       Title="OffCanvasMenu">
 
     <Grid>
+        <!--Teilung-->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-
+        <!--Top Bar-->
         <Grid Grid.Row="0">
 
             <Grid Background="#023E63">
@@ -128,11 +129,13 @@
             </Grid>
 
         </Grid>
+        <!--Rest der Seite-->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            <!--Navigationsleiste-->
             <Grid x:Name="nav_pnl"  HorizontalAlignment="Left" Grid.Row="1" Width="0" 
                Background ="White" 
                ZIndex ="2">
@@ -257,12 +260,14 @@
 
 
             </Grid >
+            <!--Inhalt der Seite-->
             <Grid Grid.Column="1" Background="LightBlue">
+                <Label FontSize="25" Margin="20">OffCanvas Navigation</Label>
                 <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
 
-                    <Button Margin="20" Click="Button_Click" >Hamburger Menü</Button>
-                    <Button Margin="20" Click="Button_Click_1">Tab</Button>
-                    <Button Margin="20" Click="Button_Click_2">Collapsible Menu</Button>
+                    <Button Margin="20" Click="Button_Click" >Hamburger Navigation</Button>
+                    <Button Margin="20" Click="Button_Click_1">Tab Navigation</Button>
+                    <Button Margin="20" Click="Button_Click_2">Collapsible Navigation</Button>
                     <Button Margin="20" Click="Button_Click_3">Top-Left Navigation</Button>
 
 

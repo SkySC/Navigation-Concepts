@@ -20,7 +20,7 @@
 
 
 
-
+        <!--Tabs-->
         <Border Grid.Row="0" BorderThickness="0.5" >
             <Grid  Height="40" Background="#FFFFFF" >
 
@@ -75,15 +75,15 @@
             </Grid>
         </Border>
 
-
+        <!--Inhalt der Seite-->
         <Grid Grid.Row="1" Background="WhiteSmoke">
-            <Label FontSize="25" Margin="20">Tabs</Label>
+            <Label FontSize="25" Margin="20">Tabs Navigation</Label>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                <Button Margin="20" Click="Button_Click">Hamburger Menü</Button>
-                <Button Margin="20" Click="Button_Click_1">Collapsible Menü</Button>
-                <Button Margin="20" Click="Button_Click_2">Off-Canvas Menü</Button>
-                <Button Margin="20" Click="Button_Click_3">Top-Left-Navigation</Button>
+                <Button Margin="20" Click="Button_Click">Hamburger Navigation</Button>
+                <Button Margin="20" Click="Button_Click_1">Collapsible Navigation</Button>
+                <Button Margin="20" Click="Button_Click_2">Off-Canvas Navigation</Button>
+                <Button Margin="20" Click="Button_Click_3">Top-Left Navigation</Button>
 
 
             </StackPanel>

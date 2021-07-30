@@ -24,25 +24,52 @@ namespace Komponente
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Hamburger Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HamburgerMenu());
         }
 
+        /// <summary>
+        ///  Collapsible Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new CollapsibleMenu());
         }
 
+        /// <summary>
+        ///  OffCanvas Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new OffCanvasMenu());
         }
 
+        /// <summary>
+        /// Tab Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Tab());
         }
+
+        /// <summary>
+        /// Mousewheel scroll durch die Tabs, wenn Window klein ist
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             ScrollViewer scv = (ScrollViewer)sender;
