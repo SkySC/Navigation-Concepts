@@ -1,0 +1,116 @@
+﻿<Page x:Class="Komponente.TopLeftNavi"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Komponente"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TopLeftNavi">
+
+    <Grid x:Name="MainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Navigationsleiste-->
+        <materialDesign:Card  Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" Grid.Column="0"
+                                     materialDesign:ShadowAssist.ShadowEdges="Right">
+            <ScrollViewer  HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" Background="#FFFFFF" >
+
+                <StackPanel Orientation="Vertical" >
+
+
+
+                    <ListView FontSize="21" FontWeight="Regular"  >
+                        <!--Listelemente-->
+                        <ListViewItem >
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Home" Height="30" Width="30" Margin="10 0 0 0"/>
+                                <Label Content="Startseite" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                            </StackPanel>
+
+                        </ListViewItem>
+                        <ListViewItem >
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="ViewDashboard" Height="30" Width="30" Margin="10 0 0 0"/>
+                                <Label Content="Kategorien" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                            </StackPanel>
+
+                        </ListViewItem>
+                        <ListViewItem >
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="GooglePodcast" Margin="10 0 0 0"  Height="30" Width="30" />
+                                <Label Content="Podcasts" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                            </StackPanel>
+
+                        </ListViewItem>
+                        <ListViewItem x:Name="Lib"  >
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="MusicBoxMultipleOutline" Margin="10 0 0 0"  Height="30" Width="30" />
+                                <Label Content="Bibliothek" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                            </StackPanel>
+
+                        </ListViewItem>
+
+                        <Separator Width="220" Background="Black" Height="5"></Separator>
+                        <ListViewItem >
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Margin="10 0 0 0" Kind="Heart" Height="30" Width="30" />
+                                <Label Content="Favoriten" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                            </StackPanel>
+
+                        </ListViewItem>
+
+
+                        <Separator Width="220" Background="Black" Height="5" ></Separator>
+                        <ListViewItem x:Name="Einst" >
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Margin="10 0 0 0" Kind="Settings" Height="30" Width="30" />
+                                <Label Content="Einstellungen" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                            </StackPanel>
+
+                        </ListViewItem>
+
+                        <ListViewItem x:Name="help" >
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Margin="10 0 0 0" Kind="Help" Height="30" Width="30" />
+                                <Label Content="Hilfe" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                            </StackPanel>
+
+                        </ListViewItem>
+                        <Separator Width="220" Background="Black" Height="5" ></Separator>
+                        <ListViewItem  x:Name="Abmelden"   >
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Margin="10 0 0 0" Kind="Logout" Height="30" Width="30" />
+                                <Label Content="Abmelden" Margin="15 0 0 0" VerticalAlignment="Bottom"></Label>
+                            </StackPanel>
+
+                        </ListViewItem>
+
+
+
+                    </ListView>
+
+
+
+
+                </StackPanel>
+            </ScrollViewer>
+        </materialDesign:Card>
+        <Grid Grid.Column="1" Background="WhiteSmoke">
+            <Label FontSize="25" Margin="20">Top-Left Navigation</Label>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <Button Margin="20" Click="Button_Click">Hamburger Menü</Button>
+                <Button Margin="20" Click="Button_Click_1">Collapsible Menü</Button>
+                <Button Margin="20" Click="Button_Click_2">Off-Canvas Menü</Button>
+                <Button Margin="20" Click="Button_Click_3">Tabs</Button>
+
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,94 @@
+﻿<Page x:Class="Komponente.Tab"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Komponente"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Tab">
+
+    <Grid Background="White">
+
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+
+
+        <Border Grid.Row="0" BorderThickness="0.5" >
+            <Grid  Height="40" Background="#FFFFFF" >
+
+
+                <ScrollViewer x:Name="scrollerTab" VerticalAlignment="Top" HorizontalScrollBarVisibility="Hidden"  VerticalScrollBarVisibility="Disabled" Foreground="Black" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+                    <WrapPanel Orientation="Horizontal" Margin="10 0 0 0">
+
+                        <RadioButton x:Name="firstTab" Style="{StaticResource MaterialDesignTabRadioButton}"
+                             Margin="4"
+                             Checked="RadioButton_Checked"
+                             IsChecked="True"
+                             FontSize="15"
+                             Content="HOME" />
+                        <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
+                             Margin="4"
+                             Checked="RadioButton_Checked"
+                             IsChecked="False"
+                             FontSize="15"
+                             Content="KONTO"  />
+
+                        <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
+                             Margin="4"
+                             Checked="RadioButton_Checked"   
+                             FontSize="15"
+                             IsChecked="False"
+                             Content="BENACHRICHTIGUNG" />
+                        <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
+                             Margin="4"
+                              Checked="RadioButton_Checked"   
+                             FontSize="15"
+                             IsChecked="False"
+                             Content="LIVE" />
+                        <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
+                             Margin="4"
+                             Checked="RadioButton_Checked"   
+                             IsChecked="False"
+                             FontSize="15"
+                             Content="INFORMATION" />
+                        <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
+                             Margin="4"
+                             Checked="RadioButton_Checked"   
+                             IsChecked="False"
+                             FontSize="15"
+                             Content="STATISTIK" />
+
+
+
+                    </WrapPanel>
+                </ScrollViewer>
+
+
+            </Grid>
+        </Border>
+
+
+        <Grid Grid.Row="1" Background="WhiteSmoke">
+            <Label FontSize="25" Margin="20">Tabs</Label>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <Button Margin="20" Click="Button_Click">Hamburger Menü</Button>
+                <Button Margin="20" Click="Button_Click_1">Collapsible Menü</Button>
+                <Button Margin="20" Click="Button_Click_2">Off-Canvas Menü</Button>
+                <Button Margin="20" Click="Button_Click_3">Top-Left-Navigation</Button>
+
+
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</Page>
