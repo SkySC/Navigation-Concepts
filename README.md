@@ -22,4 +22,4 @@ GUI project at HS Worms
 ## Installation Material Design UI:
 1. Im Editor öffnen Sie Projektmappen-Explorer (wenn es bereits nicht geöffnet, gehen Sie oben auf Ansicht und öffnen sie den Projektmappen-Explorer). 
 2. Klicken Sie mit der rechten Maustaste auf dem Projektname und wählen Sie NuGet-Pakete verwalten.
-3. Suchen Sie nach MaterialDesignThemes und MaterialDesignColors und installieren Sie diese (Wenn sie schon installiert sind, brauchen Sie nichts mehr machen). 
+3. Stellen Sie sicher, dass die Pakete “MaterialDesignThemes” und “MaterialDesignColors” schon installiert sind  (wenn nicht, installieren Sie sie).  
