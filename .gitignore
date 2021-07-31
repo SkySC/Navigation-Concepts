@@ -3,14 +3,14 @@
 # dependencies
 /button-nav/node_modules
 /collapsible-nav/node_modules
-/dialog-1/node_modules
+/dialog/node_modules
 /hamburger-full-screen-nav/node_modules
 /mega-menu-nav/node_modules
 /off-canvas-nav/node_modules
 /slider-nav/node_modules
 
 /collapsible-nav/.pnp
-/dialog-1/.pnp
+/dialog/.pnp
 /hamburger-full-screen-nav/.pnp
 /mega-menu-nav/.pnp
 /off-canvas-nav/.pnp
@@ -18,7 +18,7 @@
 
 
 /collapsible-nav/.pnp.js
-/dialog-1/.pnp.js
+/dialog/.pnp.js
 /hamburger-full-screen-nav/.pnp.js
 /mega-menu-nav/.pnp.js
 /off-canvas-nav/.pnp.js
@@ -28,7 +28,7 @@
 # production
 /button-nav/build
 /collapsible-nav/build
-/dialog-1/build
+/dialog/build
 /hamburger-full-screen-nav/build
 /mega-menu-nav/build
 /off-canvas-nav/build
@@ -37,7 +37,7 @@
 # misc
 /button-nav/.DS_Store
 /collapsible-nav/.DS_Store
-/dialog-1/build
+/dialog/build
 /hamburger-full-screen-nav/.DS_Store
 /mega-menu-nav/.DS_Store
 /off-canvas-nav/.DS_Store
@@ -45,7 +45,7 @@
 
 /button-nav/.env.local
 /collapsible-nav/.env.local
-/dialog-1/.env.local
+/dialog/.env.local
 /hamburger-full-screen-nav/.env.local
 /mega-menu-nav/.env.local
 /off-canvas-nav/.env.local
@@ -53,7 +53,7 @@
 
 /button-nav/.env.development.local
 /collapsible-nav/.env.development.local
-/dialog-1/.env.development.local
+/dialog/.env.development.local
 /hamburger-full-screen-nav/.env.development.local
 /mega-menu-nav/.env.development.local
 /off-canvas-nav/.env.development.local
@@ -61,7 +61,7 @@
 
 /button-nav/.env.test.local
 /collapsible-nav/.env.test.local
-/dialog-1/.env.test.local
+/dialog/.env.test.local
 /hamburger-full-screen-nav/.env.test.local
 /mega-menu-nav/.env.test.local
 /off-canvas-nav/.env.test.local
@@ -69,7 +69,7 @@
 
 /button-nav/.env.production.local
 /collapsible-nav/.env.production.local
-/dialog-1/.env.production.local
+/dialog/.env.production.local
 /hamburger-full-screen-nav/.env.production.local
 /mega-menu-nav/.env.production.local
 /off-canvas-nav/.env.production.local
@@ -77,7 +77,7 @@
 
 /button-nav/npm-debug.log*
 /collapsible-nav/npm-debug.log*
-/dialog-1/npm-debug.log*
+/dialog/npm-debug.log*
 /hamburger-full-screen-nav/npm-debug.log*
 /mega-menu-nav/npm-debug.log*
 /off-canvas-nav/npm-debug.log*
