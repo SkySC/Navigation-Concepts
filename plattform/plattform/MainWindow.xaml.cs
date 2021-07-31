@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Input;
-
+//Autor: Omar Almasalmeh
 
 
 namespace plattform

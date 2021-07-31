@@ -9,6 +9,7 @@
       d:DesignHeight="800" d:DesignWidth="1200"
       Title="MainMenu">
 
+    <!--Autor: Omar Almasalmeh-->
     <!--Dialog Host-->
     <materialDesign:DialogHost x:Name="Dialog" 
                                Style="{StaticResource MaterialDesignEmbeddedDialogHost}"

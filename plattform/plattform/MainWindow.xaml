@@ -21,6 +21,7 @@
         AllowsTransparency="True"
         >
 
+    <!--Autor: Omar Almasalmeh-->
     <!--Definition vom Window-->
     <WindowChrome.WindowChrome>
         <WindowChrome
