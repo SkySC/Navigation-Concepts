@@ -16,7 +16,7 @@ npm install
 ```
 
 ### Erzeugung der Produktivversion
-Führe anschließend fort mit Befehl:
+Führe anschließend fort mit dem Befehl:
 
 ```
 npm run build
