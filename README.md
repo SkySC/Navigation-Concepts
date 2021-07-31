@@ -22,7 +22,7 @@ Führe anschließend fort mit dem Befehl:
 npm run build
 ```
 
-Damit hast du eine optimierte Produktivversion mit dem Verzeichnisnamen build/  erzeugt.
+Damit hast du eine optimierte Produktivversion in einem neuen Verzeichnis build/  erzeugt.
 
 ### Ausführung der Produktivversion
 Um die Produktivversion auszuführen, muss zuletzt noch folgender Befehl verwendet werden:
